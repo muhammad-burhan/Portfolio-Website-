@@ -35,14 +35,14 @@ $(function() {
             },
 
             LIGHT: {
-				autopilot: true, // Set this to true if you want the light to follow your mouse cursor
+				autopilot: false, // Set this to true if you want the light to follow your mouse cursor
 				ambient: '#323d70',
                 diffuse: '#00298c',
-				count: 2, // Contrast 
+				count: 2, // Contrast
                 zOffset: 100,
 				
 				xyScalar: 1,
-                speed: 0.001,
+                speed: 0.09,
                 gravity: 1200,
                 dampening: 0.15,
                 minLimit: 8,

@@ -1,0 +1,41 @@
+$font-url : '../fonts/';
+
+@font-face {
+  font-family: 'Gotham';
+  src: url($font-url + 'GothamBold.eot');
+  src: url($font-url +'GothamBold.eot?#iefix') format('embedded-opentype'),
+  url($font-url +'GothamBold.woff') format('woff'),
+  url($font-url +'GothamBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url($font-url +'Gotham-Light.eot');
+  src: url($font-url +'Gotham-Light.eot?#iefix') format('embedded-opentype'),
+  url($font-url +'Gotham-Light.woff') format('woff'),
+  url($font-url +'Gotham-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url($font-url +'Gotham-Book.eot');
+  src: url($font-url +'Gotham-Book.eot?#iefix') format('embedded-opentype'),
+  url($font-url +'Gotham-Book.woff') format('woff'),
+  url($font-url +'Gotham-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url($font-url +'Gotham-Medium.eot');
+  src: url($font-url +'Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+  url($font-url + 'Gotham-Medium.woff') format('woff'),
+  url($font-url + 'Gotham-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
