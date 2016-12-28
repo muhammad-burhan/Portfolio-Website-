@@ -18,12 +18,26 @@
 </head>
 <body>
 
-<div id="background-container" class="background-container">
+<div id="background-container" class="background-container on-scene">
     <div id="background-output" class="background-output"></div>
     <div class="intro">
-        <h2>Burhan Noman</h2>
+        <h1>Burhan Noman</h1>
         <h3>User Experience Engineer</h3>
     </div>
+    <div class="about-cont">
+        <button class="bn-btn light" data-link data-destination="about-page" data-source="background-container">About</button>
+    </div>
+    <div class="work-cont">
+        <button class="bn-btn light" data-link data-destination="works-page" data-source="background-container">Works</button>
+    </div>
+</div>
+
+<div class="about-page off-scene-left">
+
+</div>
+
+<div class="works-page off-scene-right">
+
 </div>
 
 
@@ -34,6 +48,6 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/flat-surface-shader.js"></script>
 <script src="js/shader.js"></script>
-
+<script src="js/main.js"></script>
 </body>
 </html>

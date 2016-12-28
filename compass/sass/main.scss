@@ -1,6 +1,7 @@
 @import "fonts";
 @import "typography";
 @import "mixins";
+@import "form";
 
 html {
   width: 100%;
@@ -10,18 +11,21 @@ body {
   margin: 0;
   font-family: 'Gotham', Arial, sans-serif;
   font-weight: normal;
+  overflow-x: hidden;
 }
 
 .background-container {
   position: fixed; left: 0; right: 0; top: 0; bottom: 0;
+  @include translate(translate(0));
   .intro {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    @include translate(translate(-50%, -50%));
     color: white;
     text-align: center;
-    h2 {
+    h1 {
       margin-bottom: 10px;
     }
     h3 {
@@ -29,5 +33,49 @@ body {
       font-weight: 300;
     }
   }
+  .about-cont {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    @include translate(translateY(-50%));
+  }
+  .work-cont {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    @include translate(translateY(-50%));
+  }
 }
+
 noindex:-o-prefocus, .background-container {display: none;} /* Hide background in old Opera because of lags */
+
+.about-page {
+  position: absolute;
+  background-color: inherit;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.works-page {
+  position: absolute;
+  background-color: blue;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.off-scene-left {
+  transition: all 0.5s ease-in-out;
+  @include translate(translateX(-100%));
+}
+.off-scene-right {
+  transition: all 0.5s ease-in-out;
+  @include translate(translateX(100%));
+}
+.on-scene {
+  transition: all 0.5s ease-in-out;
+  @include translate(translate(0));
+}
