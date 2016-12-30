@@ -12,7 +12,10 @@ body {
   font-family: 'Gotham', Arial, sans-serif;
   font-weight: normal;
   overflow-x: hidden;
+  color: $text-color;
 }
+
+
 
 .background-container {
   position: fixed; left: 0; right: 0; top: 0; bottom: 0;
@@ -50,12 +53,43 @@ body {
 noindex:-o-prefocus, .background-container {display: none;} /* Hide background in old Opera because of lags */
 
 .about-page {
-  position: absolute;
-  background-color: inherit;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  padding: 0 10% 35px;
+  .back-to-home {
+    position: fixed;
+    top: 50%;
+    right: 34px;
+    @include translate(translateY(-50%));
+  }
+  section {
+    @include display-flex();
+    padding-top: 80px;
+    .about-text-container {
+      @include flex(1);
+      h4 {
+        display: inline-block;
+        padding-bottom: 4px;
+        border-bottom: 3px solid grey;
+        margin-bottom: 8px;
+        transition: border 0.3s ease-in;
+        &:hover {
+          border-color: $heading-line-hover;
+          transition: border 0.3s ease-in;
+        }
+      }
+      p {
+        font-size: 18px;
+        font-family: 'Gotham Book', Arial, sans-serif;
+      }
+      .content-about-me {
+
+      }
+      .content-design-engineer {
+      }
+    }
+    .about-picture {
+      @include flex(1);
+    }
+  }
 }
 
 .works-page {
@@ -65,6 +99,51 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+nav.header {
+  margin-bottom: 25px;
+  position: fixed;
+  height: 55px;
+  top: 0;
+  right: 35px;
+  left: 35px;
+  .bn-breadcrumb {
+    display: flex;
+    width: 160px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top:15px;
+    @include translate(translateX(-50%));
+
+    img, .divider, ul {
+      display: block;
+    }
+
+    img {
+      margin-right: 5px;
+    }
+    .divider {
+      width: 35px;
+      height: 0;
+      border: 1px solid $color-main;
+    }
+
+    ul {
+      padding-left: 10px;
+      color: $color-main;
+    }
+  }
+  .right-link {
+    float: right;
+    margin-top: 32px;
+  }
+  .left-link {
+    float: left;
+    margin-top: 32px;
+  }
 }
 
 .off-scene-left {
