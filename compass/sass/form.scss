@@ -10,7 +10,7 @@
   border: 2px solid;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 0.9em 3em;
+  padding: 14px 45px;
   background: none;
   color: inherit;
   vertical-align: middle;
@@ -28,6 +28,19 @@
       }
     }
   }
+
+  &.dark {
+    color: $color-main;
+    border: 3px solid $color-main;
+    &:hover {
+      color: white;
+      border-color: $color-main;
+      &:before {
+        background-color: $color-main;
+      }
+    }
+  }
+
   &:hover {
     &:before {
       opacity: 1;
@@ -71,6 +84,9 @@
   &.right {
     padding: 6px 14px 7px 20px;
   }
+  &.left {
+    padding: 6px 18px 7px 16px;
+  }
   &:hover {
     border-color: $back-btn-hover;
     span {
@@ -97,23 +113,6 @@
     background: #37474f;
     -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
     transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
-    -webkit-transform-origin: 0% 100%;
-    transform-origin: 0% 100%;
-    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
-    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
-  }
-
-  &.left:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150%;
-    height: 100%;
-    z-index: -1;
-    background: #37474f;
-    -webkit-transform: rotate3d(0, 0, 1, 45deg) translate3d(0, -3em, 0);
-    transform: rotate3d(0, 0, 1, 45deg) translate3d(0, -3em, 0);
     -webkit-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
     -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;

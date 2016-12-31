@@ -17,41 +17,31 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="background-container-body">
 
 <div id="background-container" class="background-container on-scene">
-    <div id="background-output" class="background-output"></div>
-    <div class="intro">
-        <h1>Burhan Noman</h1>
-        <h3>User Experience Engineer</h3>
-    </div>
-    <div class="about-cont">
-        <button class="bn-btn light" data-link data-destination="about-page" data-source="background-container">About</button>
-    </div>
-    <div class="work-cont">
-        <button class="bn-btn light" data-link data-destination="works-page" data-source="background-container">Works</button>
-    </div>
+    <section>
+        <div id="background-output" class="background-output"></div>
+        <div class="intro">
+            <h1>Burhan Noman</h1>
+            <h3>User Experience Engineer</h3>
+        </div>
+        <div class="about-cont">
+            <button class="bn-btn light" data-link data-destination="about-page" data-source="background-container">About</button>
+        </div>
+        <div class="work-cont">
+            <button class="bn-btn light" data-link data-destination="works-page" data-source="background-container">Works</button>
+        </div>
+    </section>
+</div>
+<div class="background-container-meta">
+
 </div>
 
+
+
 <div class="about-page off-scene-left">
-    <nav class="header">
-        <div class="bn-breadcrumb">
-            <img src="img/logo_noshadow_blue.png">
-            <div class="divider"></div>
-            <ul>
-                <li>About</li>
-            </ul>
-        </div>
-        <div class="right-link">
-            Go to Works
-        </div>
-    </nav>
-    <div class="back-to-home">
-        <button class="bn-arrow-circle right" data-link data-destination="background-container" data-source="about-page">
-            <span class="fa fa-angle-right"></span>
-        </button>
-    </div>
-    <section>
+    <section style="display: none">
         <div class="about-text-container">
             <div class="content-about-me">
                 <h4>About me</h4>
@@ -74,15 +64,68 @@
             </div>
         </div>
         <div class="about-picture">
-
+            <div class="contact-container">
+                <div class="display-picture">
+                    <img src="img/pp2.jpg">
+                </div>
+                <h5>Burhan Noman</h5>
+                <h6 class="email">mburhannoman@gmail.com</h6>
+                <button class="bn-btn dark">Download Resume</button>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/burhannoman" target="_blank"><span class="fa fa-linkedin"></span></a>
+                    <a href="https://www.behance.net/burhannoman" target="_blank"><span class="fa fa-behance"></span></a>
+                    <a href="https://github.com/muhammad-burhan" target="_blank"><span class="fa fa-github"></span></a>
+                    <a href="https://twitter.com/burhan_noman" target="_blank"><span class="fa fa-twitter"></span></a>
+                </div>
+            </div>
         </div>
     </section>
 </div>
-
-<div class="works-page off-scene-right">
-
+<div class="about-page-meta" style="display: none">
+    <nav class="header">
+        <div class="bn-breadcrumb">
+            <img src="img/logo_noshadow_blue.png">
+            <div class="divider"></div>
+            <ul>
+                <li>About</li>
+            </ul>
+        </div>
+        <div class="right-link">
+            <a data-jump data-destination="works-page" data-source="about-page">Go to Works</a>
+        </div>
+    </nav>
+    <div class="back-to-home">
+        <button class="bn-arrow-circle right" data-link data-destination="background-container" data-source="about-page">
+            <span class="fa fa-angle-right"></span>
+        </button>
+    </div>
 </div>
 
+
+<div class="works-page off-scene-right">
+    <section style="display: none">
+
+    </section>
+</div>
+<div class="works-page-meta" style="display: none">
+    <nav class="header">
+        <div class="bn-breadcrumb">
+            <img src="img/logo_noshadow_white.png">
+            <div class="divider"></div>
+            <ul>
+                <li>Works</li>
+            </ul>
+        </div>
+        <div class="left-link">
+            <a data-jump data-destination="about-page" data-source="works-page">Go to About</a>
+        </div>
+    </nav>
+    <div class="back-to-home">
+        <button class="bn-arrow-circle left" data-link data-destination="background-container" data-source="works-page">
+            <span class="fa fa-angle-left"></span>
+        </button>
+    </div>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.js"></script>
