@@ -52,34 +52,6 @@ $(function() {
                 draw: false // Set to true if you want to just draw a background image (static).
             }
         };
-
-		// Ready made themes!
-		// The styles replaces the daufault colors when a class is defined on the body tag.
-        if ($body.hasClass('theme-ice')) {
-            config.background.LIGHT.ambient = '#1165A4';
-            config.background.LIGHT.diffuse = '#514311';
-        } else if ($body.hasClass('theme-nature')) {
-            config.background.LIGHT.ambient = '#00935B';
-            config.background.LIGHT.diffuse = '#02480A';
-        } else if ($body.hasClass('theme-sea')) {
-            config.background.LIGHT.ambient = '#76E4CE';
-            config.background.LIGHT.diffuse = '#0E411F';
-            config.background.LIGHT.zOffset = 100;
-        } else if ($body.hasClass('theme-candy')) {
-            config.background.LIGHT.ambient = '#A42D71';
-            config.background.LIGHT.diffuse = '#4E2F1B';
-        } else if ($body.hasClass('theme-peach')) {
-            config.background.LIGHT.ambient = '#FF7171';
-            config.background.LIGHT.diffuse = '#895321';
-            config.background.LIGHT.zOffset = 100;
-        } else if ($body.hasClass('theme-light')) {
-            config.background.LIGHT.ambient = '#DBAA95';
-            config.background.LIGHT.diffuse = '#4F460B';
-        } else if ($body.hasClass('theme-darkness')) {
-            config.background.LIGHT.ambient = '#3C3C3C';
-            config.background.LIGHT.diffuse = '#494949';
-            config.background.LIGHT.zOffset = 200;
-        }
 		
 		// Initialize the background
         initBackground();

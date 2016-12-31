@@ -9,6 +9,7 @@
 
     <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -104,9 +105,38 @@
 
 <div class="works-page off-scene-right">
     <section style="display: none">
+        <div id="fullpage">
+            <div class="section portfolio-item item-alibi">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>Alibi</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            A mobile app which lets you post anonymously in a particular group. Users can read, like and
+                            dislike posts in a group. Users can also make a guess on a particular post about the person
+                            who posted. If its correct you will get reward points.
+                        </p>
+                        <h5>Participation</h5>
+                        <p>
+                            Researcher, Interaction Designer, User Experience Designer, Motion Designer
+                        </p>
+                        <button class="bn-btn light">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul id="scene" class="scene">
+                            <li class="layer" data-depth="0.30"><img src="img/portfolio/alibi/banner.png"></li>
+                        </ul>
 
+                    </div>
+                </div>
+            </div>
+            <div class="section">Some section</div>
+            <div class="section">Some section</div>
+            <div class="section">Some section</div>
+        </div>
     </section>
 </div>
+<div class="side-bar-overlay"></div>
 <div class="works-page-meta" style="display: none">
     <nav class="header">
         <div class="bn-breadcrumb">
@@ -125,6 +155,18 @@
             <span class="fa fa-angle-left"></span>
         </button>
     </div>
+    <div class="list-of-projects">
+        <span class="heading">
+            List of Projects
+        </span>
+        <div class="circle"></div>
+        <div></div>
+        <div class="liner"></div>
+    </div>
+    <div class="list-project-trigger"></div>
+    <div class="side-bar">
+
+    </div>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -134,6 +176,15 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/flat-surface-shader.js"></script>
 <script src="js/shader.js"></script>
+<script src="js/jquery.fullpage.min.js"></script>
+<script src="js/jquery.parallax.min.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage();
+    });
+    $('#scene').parallax();
+</script>
 </body>
 </html>

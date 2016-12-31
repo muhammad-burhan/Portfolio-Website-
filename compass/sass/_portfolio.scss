@@ -1,0 +1,46 @@
+.works-page {
+  .item-alibi {
+    background-color: #58b8bf;
+  }
+}
+
+.portfolio-item {
+  .item-container {
+    padding: 0 12%;
+    @include display-flex();
+    .content {
+      @include flex(1);
+      color: white;
+      h2 {
+        margin: 0;
+      }
+      h5 {
+        font-size: 16px;
+        margin-top: 16px;
+        display: inline-block;
+        padding-bottom: 4px;
+        margin-bottom: 8px;
+        transition: border 0.3s ease-in;
+        &:hover {
+          border-color: white;
+          transition: border 0.3s ease-in;
+        }
+      }
+      p {
+        margin: 0;
+        font-weight: 300;
+      }
+      button {
+        margin-top: 15px;
+        padding: 10px 28px;
+        font-size: 14px;
+      }
+    }
+    .media {
+      @include flex(1);
+      @include display-flex();
+      justify-content: Center;
+
+    }
+  }
+}

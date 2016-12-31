@@ -15,6 +15,17 @@ body {
   color: $text-color;
 }
 
+.side-bar-overlay {
+  display: none;
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background: black;
+  opacity: 0.5;
+  z-index: 1;
+}
 
 .background-container {
   position: fixed; left: 0; right: 0; top: 0; bottom: 0;
@@ -52,13 +63,13 @@ body {
 noindex:-o-prefocus, .background-container {display: none;} /* Hide background in old Opera because of lags */
 
 .about-page {
-  padding: 0 10% 35px;
+  padding: 0 12% 35px;
 
   section {
     @include display-flex();
     padding-top: 80px;
     .about-text-container {
-      @include flex(1);
+      @include flex(2);
       h4 {
         display: inline-block;
         padding-bottom: 4px;
@@ -136,13 +147,17 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
   }
 }
 
+.about-page-body {
+  overflow-y: auto !important;
+}
+
 .works-page {
   background-color: teal;
-  position: absolute;
+  position: fixed;
   top:0;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left:0;
+  right:0;
 }
 
 .works-page-meta {
@@ -178,6 +193,52 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
         }
       }
     }
+  }
+  .list-of-projects {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    text-align: Center;
+    transition: $listhead-animation;
+    transform: translateY(-50%) rotate(270deg);
+    .heading {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: white;
+    }
+    .circle {
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .liner {
+      display: inline-block;
+      height: 55px;
+      border: 1px solid white;
+    }
+  }
+  .list-project-trigger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom:0;
+    width: 110px;
+    z-index: 3;
+    cursor: pointer;
+  }
+  .side-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background: white;
+    height: 100%;
+    transform: translateX(300px);
+    transition: $sidebar-animation;
+    z-index: 4;
   }
 }
 
@@ -240,3 +301,20 @@ nav.header {
   transition: all 0.5s ease-in-out;
   @include translate(translate(0));
 }
+
+.opensidebar {
+  .on-scene {
+    @include translate(translate(-4%));
+  }
+  .works-page-meta {
+    .side-bar {
+      @include translate(translateX(0));
+    }
+    .list-of-projects {
+      z-index: 3;
+      right: 285px;
+    }
+  }
+}
+
+@import "portfolio";
