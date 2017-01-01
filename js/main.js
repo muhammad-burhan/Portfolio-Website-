@@ -25,7 +25,7 @@ $('[data-link]').click(function(event) {
     $(destMeta).fadeIn(1500);
 
     // hide the list of projects
-    $(".list-project-trigger").hide();
+    $(".side-bar").hide();
     $(".list-of-projects").hide();
 
     if ($(dest).hasClass('off-scene-left')) {
@@ -49,9 +49,9 @@ $('[data-link]').click(function(event) {
     }
 
     setTimeout(function(){
-        $(".list-project-trigger").show();
-        $(".list-of-projects").show();
-    }, 1200);
+        $(".side-bar").show();
+        $(".list-of-projects").fadeIn(300);
+    }, 800);
 });
 
 $('[data-jump]').click(function(event) {
@@ -89,22 +89,26 @@ $('[data-jump]').click(function(event) {
     }
 });
 
-$(".list-project-trigger").mouseenter(function(){
+$(".side-bar").click(function(){
+    //Disable work page scrolling
+    $.fn.fullpage.setAllowScrolling(false);
+
     $("body").addClass("opensidebar");
-    $(".side-bar-overlay").fadeIn(500);
+    $(".side-bar-overlay").fadeIn(400, function(){
+        $(".list-of-projects").addClass("close");
+    });
 });
 
-$(".list-project-trigger").mouseleave(function(){
-    $("body").removeClass("opensidebar");
-    $(".side-bar-overlay").fadeOut(500);
+$(document).on('click', '.list-of-projects.close .circle', function()
+{
+    //Enable work page scrolling
+    $.fn.fullpage.setAllowScrolling(true);
+
+    $(".list-of-projects").removeClass("close");
+    setTimeout(function(){
+        $("body").removeClass("opensidebar");
+        $(".side-bar-overlay").fadeOut(500);
+    }, 300);
+
 });
 
-$(".side-bar").hover(function(){
-    $("body").addClass("opensidebar");
-    $(".side-bar-overlay").fadeIn(500);
-});
-
-$(".side-bar").mouseleave(function(){
-    $("body").removeClass("opensidebar");
-    $(".side-bar-overlay").fadeOut(500);
-});
