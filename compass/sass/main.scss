@@ -158,6 +158,17 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
   bottom: 0;
   left:0;
   right:0;
+
+  .detail-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1;
+    height: 100%;
+    display: none;
+  }
 }
 
 .works-page-meta {

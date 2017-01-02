@@ -112,3 +112,7 @@ $(document).on('click', '.list-of-projects.close .circle', function()
 
 });
 
+$('[data-view-process]').click(function(event) {
+    var dest = $(this).data('detail-page');
+    $(".detail-page").fadeIn();
+});
