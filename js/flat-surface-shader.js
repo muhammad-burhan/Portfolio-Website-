@@ -46,11 +46,11 @@ function initBackground() {
   initPlugin();
 
   config.background.LIGHT.bounds = FSS.Vector3.create(),
-  config.background.LIGHT.step = FSS.Vector3.create(
-      Math.randomInRange(0.2, 1.0),
-      Math.randomInRange(0.2, 1.0),
-      Math.randomInRange(0.2, 1.0)
-  )
+      config.background.LIGHT.step = FSS.Vector3.create(
+          Math.randomInRange(0.2, 1.0),
+          Math.randomInRange(0.2, 1.0),
+          Math.randomInRange(0.2, 1.0)
+      )
 
   //------------------------------
   // Global Properties
@@ -111,9 +111,9 @@ function initBackground() {
       vertex = geometry.vertices[v];
       vertex.anchor = FSS.Vector3.clone(vertex.position);
       vertex.step = FSS.Vector3.create(
-        Math.randomInRange(0.2, 1.0),
-        Math.randomInRange(0.2, 1.0),
-        Math.randomInRange(0.2, 1.0)
+          Math.randomInRange(0.2, 1.0),
+          Math.randomInRange(0.2, 1.0),
+          Math.randomInRange(0.2, 1.0)
       );
       vertex.time = Math.randomInRange(0, Math.PIM2);
     }
@@ -180,9 +180,9 @@ function initBackground() {
       ox = Math.sin(config.background.LIGHT.step[0] * now * config.background.LIGHT.speed);
       oy = Math.cos(config.background.LIGHT.step[1] * now * config.background.LIGHT.speed);
       FSS.Vector3.set(attractor,
-        config.background.LIGHT.bounds[0]*ox,
-        config.background.LIGHT.bounds[1]*oy,
-        config.background.LIGHT.zOffset);
+          config.background.LIGHT.bounds[0]*ox,
+          config.background.LIGHT.bounds[1]*oy,
+          config.background.LIGHT.zOffset);
     }
 
     // Animate Lights
@@ -215,9 +215,9 @@ function initBackground() {
       oy = Math.cos(vertex.time + vertex.step[1] * now * config.background.MESH.speed);
       oz = Math.sin(vertex.time + vertex.step[2] * now * config.background.MESH.speed);
       FSS.Vector3.set(vertex.position,
-        config.background.MESH.xRange*geometry.segmentWidth*ox,
-        config.background.MESH.yRange*geometry.sliceHeight*oy,
-        config.background.MESH.zRange*offset*oz - offset);
+          config.background.MESH.xRange*geometry.segmentWidth*ox,
+          config.background.MESH.yRange*geometry.sliceHeight*oy,
+          config.background.MESH.zRange*offset*oz - offset);
       FSS.Vector3.add(vertex.position, vertex.anchor);
     }
 
