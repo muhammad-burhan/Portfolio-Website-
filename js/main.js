@@ -51,7 +51,7 @@ $('[data-link]').click(function(event) {
     setTimeout(function(){
         $(".side-bar").show();
         $(".list-of-projects").fadeIn(300);
-    }, 800);
+    }, 500);
 });
 
 $('[data-jump]').click(function(event) {

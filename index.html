@@ -186,7 +186,6 @@
         <div></div>
         <div class="liner"></div>
     </div>
-
     <div class="side-bar">
         <div id="scrollstyle-3" class="side-bar-content">
             <div class="side-bar-item">
@@ -222,6 +221,14 @@
 
         </div>
     </div>
+    <div class="page-number">
+        <span class="current-page">1</span>
+        <span class="divider">/</span>
+        <span class="total-pages">10</span>
+        <div class="note">
+            Scroll to navigate
+        </div>
+    </div>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -237,7 +244,16 @@
 
 <script>
     $(document).ready(function() {
-        $('#fullpage').fullpage();
+        var totalPages = $("#fullpage .section.portfolio-item").length;
+        $(".page-number .total-pages").html(totalPages);
+        $('#fullpage').fullpage({
+            scrollingSpeed: 1000,
+            loopTop: true,
+            loopBottom: true,
+            onLeave: function(index, nextIndex, direction) {
+                $(".page-number .current-page").html(nextIndex);
+            }
+        });
     });
     $('.parallex-item').parallax();
 </script>

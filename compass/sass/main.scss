@@ -293,7 +293,6 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
       transition: height 0.3s ease-in-out;
     }
   }
-
   .side-bar {
     position: fixed;
     top: 0;
@@ -309,6 +308,19 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
       background: white;
       height: 100%;
       overflow-y: auto;
+    }
+  }
+
+  .page-number {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    .note {
+      font-weight: 300;
+      font-size: 14px;
     }
   }
 }
