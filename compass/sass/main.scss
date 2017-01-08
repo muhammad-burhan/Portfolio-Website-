@@ -45,6 +45,13 @@ body {
       margin-top: 5px;
       font-weight: 300;
     }
+    .mobile-btns {
+      display: none;
+      margin-top: 40px;
+      button:first-child {
+        margin-right: 10px;
+      }
+    }
   }
   .about-cont {
     position: absolute;
@@ -516,3 +523,4 @@ nav.header {
 }
 
 @import "portfolio";
+@import "responsive";

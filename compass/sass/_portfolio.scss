@@ -133,3 +133,27 @@
     display: block;
   }
 }
+
+@media only screen and (max-width : 768px) {
+  .portfolio-item {
+    .item-container {
+      flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      -webkit-flex-direction: column-reverse;
+      padding: 0 5% 0 14%;
+      .media {
+        width: 100%;
+        ul {
+          padding: 0;
+          margin: 0;
+        }
+      }
+      .content {
+        width: 100%;
+        h5 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

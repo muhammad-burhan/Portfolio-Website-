@@ -40,13 +40,26 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
 </head>
 <body class="background-container-body">
+<!-- ****************************************************************************************** -->
+<!-- **** Inspection? Why don't you just email me and ask whatever questions you have :) ****-->
+<!-- ****************************************************************************************** -->
 
+
+
+
+<!-- ****************************************************************************************** -->
+<!-- ********************************** MAIN PAGE *********************************************-->
+<!-- ****************************************************************************************** -->
 <div id="background-container" class="background-container on-scene">
     <section>
         <div id="background-output" class="background-output"></div>
         <div class="intro">
             <h1>Burhan Noman</h1>
             <h3>User Experience Engineer</h3>
+            <div class="mobile-btns">
+                <button class="bn-btn light" data-link data-destination="about-page" data-source="background-container">About</button>
+                <button class="bn-btn light" data-link data-destination="works-page" data-source="background-container">Works</button>
+            </div>
         </div>
         <div class="about-cont">
             <button class="bn-btn light" data-link data-destination="about-page" data-source="background-container">About</button>
@@ -56,10 +69,11 @@
         </div>
     </section>
 </div>
-<div class="background-container-meta">
+<div class="background-container-meta"></div>
 
-</div>
-
+<!-- ****************************************************************************************** -->
+<!-- ********************************** ABOUT PAGE *********************************************-->
+<!-- ****************************************************************************************** -->
 <div class="about-page off-scene-left">
     <section style="display: none">
         <div class="about-text-container">
@@ -122,6 +136,9 @@
 </div>
 
 
+<!-- ****************************************************************************************** -->
+<!-- ********************************** WORK PAGE *********************************************-->
+<!-- ****************************************************************************************** -->
 <div class="works-page off-scene-right">
     <section style="display: none">
         <div id="fullpage">
@@ -332,16 +349,14 @@
     </div>
 </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
 <script src="js/jquery.js"></script>
 <script src="js/modernizr.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/flat-surface-shader.js"></script>
 <script src="js/shader.js"></script>
 <script src="js/jquery.fullpage.min.js"></script>
 <script src="js/jquery.parallax.min.js"></script>
 <script src="js/main.js"></script>
-
 </body>
 </html>

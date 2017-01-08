@@ -1,0 +1,155 @@
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .about-page {
+    section {
+      flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      -webkit-flex-direction: column-reverse;
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  p {
+    font-size: 14px;
+  }
+  .background-container {
+    .mobile-btns {
+      display: block !important;
+    }
+    .about-cont, .work-cont {
+      display: none;
+    }
+  }
+
+  .about-page {
+    padding: 0 10% 35px 6%;
+    section  {
+      .about-text-container p {
+        font-size: 14px;
+      }
+    }
+  }
+  .bn-arrow-circle {
+    span {
+      font-size: 22px;
+    }
+    &.right {
+      padding: 1px 7px 2px 11px;
+    }
+    &.left {
+      padding: 3px 13px 4px 11px;
+    }
+  }
+  .works-page-meta {
+    .list-of-projects {
+      display: none !important;
+    }
+    .side-bar {
+      display: none !important;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  h1 {
+    font-size: 1.6em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+
+  .background-container {
+    .bn-btn {
+      font-size: 12px;
+      padding: 10px 25px;
+    }
+  }
+
+  .about-page-meta {
+    nav.header {
+      right: 0;
+      left: 0;
+      padding: 5px 20px;
+      background: white;
+      height: 38px;
+      .bn-breadcrumb {
+        left: 86px;
+        justify-content: flex-start;
+        top: 5px;
+        .divider {
+          width: 20px;
+        }
+        ul {
+          font-size: 14px;
+        }
+      }
+      .right-link, .left-link {
+        font-size: 14px;
+        margin-top: 16px;
+      }
+    }
+    .back-to-home {
+      right: 30px;
+    }
+  }
+
+  .works-page-meta {
+    nav.header {
+      right: 0;
+      left: 0;
+      padding: 5px 20px;
+      height: 38px;
+      .bn-breadcrumb {
+        left: 86px;
+        justify-content: flex-start;
+        top: 5px;
+        .divider {
+          width: 20px;
+        }
+        ul {
+          font-size: 14px;
+        }
+      }
+      .right-link, .left-link {
+        font-size: 14px;
+        margin-top: 16px;
+        float: right;
+      }
+    }
+    .back-to-home {
+      left: 15px;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+@media (min-width: 480px) and (max-width: 992px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+
+  .background-container {
+    .bn-btn {
+      font-size: 14px;
+      padding: 12px 30px;
+    }
+  }
+}
