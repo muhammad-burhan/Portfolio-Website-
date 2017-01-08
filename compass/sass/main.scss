@@ -168,6 +168,8 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
     z-index: 1;
     height: 100%;
     display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -207,7 +209,7 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
   }
   .list-of-projects {
     position: fixed;
-    right: 0;
+    right: 10px;
     top: 50%;
     text-align: Center;
     transition: $listhead-animation;
@@ -276,6 +278,7 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
       font-size: 12px;
       letter-spacing: 1px;
       color: white;
+      transition: color 0.3s ease;
     }
     .circle {
       width: 10px;
@@ -284,13 +287,12 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
       border-radius: 50%;
       display: inline-block;
       transition: all 0.3s ease-in-out;
-
     }
     .liner {
       display: inline-block;
       height: 55px;
       border: 1px solid white;
-      transition: height 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
   .side-bar {
@@ -320,7 +322,7 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
     font-size: 18px;
     .note {
       font-weight: 300;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 }
@@ -353,22 +355,26 @@ nav.header {
       width: 35px;
       height: 0;
       border: 1px solid $color-main;
+      transition: color 0.3s ease;
     }
 
     ul {
       padding-left: 10px;
       color: $color-main;
+      transition: color 0.3s ease;
     }
   }
   .right-link {
     float: right;
     margin-top: 32px;
     cursor: pointer;
+    transition: color 0.3s ease;
   }
   .left-link {
     float: left;
     margin-top: 32px;
     cursor: pointer;
+    transition: color 0.3s ease;
   }
 }
 
@@ -432,6 +438,81 @@ nav.header {
 #scrollstyle-3::-webkit-scrollbar-thumb
 {
   background-color: #000000;
+}
+
+.detail-page-open {
+  nav.header {
+    .bn-breadcrumb {
+      .divider {
+        width: 35px;
+        height: 0;
+        border: 1px solid $color-main;
+      }
+
+      ul {
+        padding-left: 10px;
+        color: $color-main;
+        li {
+          color: $color-main;
+        }
+      }
+    }
+    .right-link {
+      color: $text-color;
+    }
+    .left-link {
+     display: none;
+    }
+  }
+  .back-to-home {
+    display: none;
+  }
+  .back-to-home.visible-detail-page {
+    .bn-arrow-circle {
+      padding: 10px 14px 10px 14px;
+      border-color: $back-btn-clr;
+      span {
+        color: $back-btn-clr;
+        font-size: 20px;
+      }
+      &:hover {
+        border-color: $color-main;
+        span {
+          color: white;
+        }
+        &:before {
+          background-color: $color-main;
+        }
+      }
+
+    }
+  }
+  .list-of-projects {
+    color: $text-color;
+    .heading {
+      color: $text-color;
+    }
+    .circle {
+      background: $text-color;
+    }
+    .liner {
+      border: 1px solid $text-color;
+    }
+    &.close {
+      .circle {
+        background: transparent;
+      }
+      .heading {
+        color: white;
+      }
+      .liner {
+        border: 1px solid white;
+      }
+    }
+  }
+  .page-number {
+    z-index: -1;
+  }
 }
 
 @import "portfolio";

@@ -69,7 +69,7 @@
                 </div>
                 <h5>Burhan Noman</h5>
                 <h6 class="email">mburhannoman@gmail.com</h6>
-                <button class="bn-btn dark">Download Resume</button>
+                <button id="download-resume" class="bn-btn dark">Download Resume</button>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/burhannoman" target="_blank"><span class="fa fa-linkedin"></span></a>
                     <a href="https://www.behance.net/burhannoman" target="_blank"><span class="fa fa-behance"></span></a>
@@ -127,6 +127,28 @@
                     </div>
                 </div>
             </div>
+            <div class="section portfolio-item item-riverstreet">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>River Street Savannah</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            Best hotels is the re-design of a popular accommodation website "Bookings.com". This website
+                            is the part of my course work for Interactive Web Design 715.
+                        </p>
+                        <h5>Participation</h5>
+                        <p>
+                            Interaction Designer, UI Designer, Researcher
+                        </p>
+                        <button class="bn-btn light">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul class="parallex-item scene">
+                            <li class="layer" data-depth="0.20"><img src="img/portfolio/riverstreet/riverstreet%20banner.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="section portfolio-item item-Ambit">
                 <div class="item-container">
                     <div class="content">
@@ -141,7 +163,7 @@
                         <p>
                             Interaction Designer, UI Designer, Researcher
                         </p>
-                        <button class="bn-btn light">View Process</button>
+                        <button class="bn-btn light" data-view-process data-detail-page="ambit-detail-page">View Process</button>
                     </div>
                     <div class="media">
                         <ul class="parallex-item scene">
@@ -150,8 +172,50 @@
                     </div>
                 </div>
             </div>
-            <div class="section">Some section</div>
-            <div class="section">Some section</div>
+            <div class="section portfolio-item item-hotel">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>Best Hotels</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            Best hotels is the re-design of a popular accommodation website "Bookings.com". This website
+                            is the part of my course work for Interactive Web Design 715.
+                        </p>
+                        <h5>Participation</h5>
+                        <p>
+                            Interaction Designer, UI Designer, Researcher
+                        </p>
+                        <button class="bn-btn light" data-view-process data-detail-page="booking-detail-page">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul class="parallex-item scene">
+                            <li class="layer" data-depth="0.20"><img src="img/portfolio/bookings/hotel%20banner.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section portfolio-item item-tournorth">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>Tour North</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            Tour North is a one page responsive website depicting my beautiful journey to the
+                            amazing valleys of Pakistan.
+                        </p>
+                        <h5>Participation</h5>
+                        <p>
+                            Interaction Designer, UI Designer, Researcher
+                        </p>
+                        <button class="bn-btn light">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul class="parallex-item scene">
+                            <li class="layer" data-depth="0.20"><img src="img/portfolio/tournorth/north%20banner.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="detail-page">
@@ -163,7 +227,8 @@
 <div class="works-page-meta" style="display: none">
     <nav class="header">
         <div class="bn-breadcrumb">
-            <img src="img/logo_noshadow_white.png">
+            <img class="logo-light" src="img/logo_noshadow_white.png">
+            <img class="visible-detail-page" src="img/logo_noshadow_blue.png" style="display: none;">
             <div class="divider"></div>
             <ul>
                 <li>Works</li>
@@ -176,6 +241,11 @@
     <div class="back-to-home">
         <button class="bn-arrow-circle left" data-link data-destination="background-container" data-source="works-page">
             <span class="fa fa-angle-left"></span>
+        </button>
+    </div>
+    <div class="back-to-home visible-detail-page" style="display: none;">
+        <button class="bn-arrow-circle left">
+            <span class="fa fa-times"></span>
         </button>
     </div>
     <div class="list-of-projects">
@@ -242,20 +312,5 @@
 <script src="js/jquery.parallax.min.js"></script>
 <script src="js/main.js"></script>
 
-<script>
-    $(document).ready(function() {
-        var totalPages = $("#fullpage .section.portfolio-item").length;
-        $(".page-number .total-pages").html(totalPages);
-        $('#fullpage').fullpage({
-            scrollingSpeed: 1000,
-            loopTop: true,
-            loopBottom: true,
-            onLeave: function(index, nextIndex, direction) {
-                $(".page-number .current-page").html(nextIndex);
-            }
-        });
-    });
-    $('.parallex-item').parallax();
-</script>
 </body>
 </html>

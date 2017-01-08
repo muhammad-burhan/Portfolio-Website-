@@ -2,8 +2,26 @@
   .item-alibi {
     background-color: #58b8bf;
   }
+  .detail-page-container {
+    width: 960px;
+    margin: 90px auto;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    img {
+      width: 100%;
+    }
+  }
+  .item-riverstreet {
+    background-color: #10a8ab;
+  }
   .item-Ambit {
     background-color: #125474;
+  }
+  .item-hotel {
+    background-color: #042758;
+  }
+  .item-tournorth {
+    background-color: #2cacfd;
   }
 }
 
