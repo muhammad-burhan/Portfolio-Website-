@@ -2,6 +2,7 @@
  * Created by Burhan Noman on 12/28/2016.
  */
 
+var parallax;
 $(document).ready(function() {
     var totalPages = $("#fullpage .section.portfolio-item").length;
     $(".page-number .total-pages").html(totalPages);
@@ -115,7 +116,7 @@ $(document).ready(function() {
         });
     });
 
-    $('.parallex-item').parallax();
+
 
     $('[data-view-process]').click(function(e) {
         e.stopPropagation();
@@ -151,9 +152,7 @@ $(document).ready(function() {
         }, 1000);
     });
 
-    /*$(".side-bar .side-bar-item").click(function(){
-        var dest = $(this).data('destination');
-    });*/
+    parallax = $('.parallex-item').parallax();
 });
 
 
