@@ -11,7 +11,6 @@ body {
   margin: 0;
   font-family: 'Gotham', Arial, sans-serif;
   font-weight: normal;
-  overflow-x: hidden;
   color: $text-color;
 }
 
@@ -151,10 +150,6 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
     right: 34px;
     @include translate(translateY(-50%));
   }
-}
-
-.about-page-body {
-  overflow-y: auto !important;
 }
 
 .works-page {
