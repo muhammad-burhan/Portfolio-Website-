@@ -9,7 +9,7 @@
 
     <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css" />
+    <link rel="stylesheet" href="css/onepage-scroll.css">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -139,10 +139,10 @@
 <!-- ****************************************************************************************** -->
 <!-- ********************************** WORK PAGE *********************************************-->
 <!-- ****************************************************************************************** -->
-<div class="works-page off-scene-right">
-    <section style="display: none">
-        <div id="fullpage">
-            <div class="section portfolio-item item-alibi">
+<div class="wrapper works-page off-scene-right">
+
+        <section class="main">
+            <section class="section portfolio-item item-alibi">
                 <div class="item-container">
                     <div class="content">
                         <h2>Alibi</h2>
@@ -164,8 +164,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="section portfolio-item item-riverstreet">
+            </section>
+            <section class="section portfolio-item item-riverstreet">
                 <div class="item-container">
                     <div class="content">
                         <h2>River Street Savannah</h2>
@@ -186,8 +186,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="section portfolio-item item-Ambit">
+            </section>
+            <section class="section portfolio-item item-Ambit">
                 <div class="item-container">
                     <div class="content">
                         <h2>AmbitWiz</h2>
@@ -209,8 +209,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="section portfolio-item item-hotel">
+            </section>
+            <section class="section portfolio-item item-hotel">
                 <div class="item-container">
                     <div class="content">
                         <h2>Best Hotels</h2>
@@ -231,8 +231,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="section portfolio-item item-tournorth">
+            </section>
+            <section class="section portfolio-item item-tournorth">
                 <div class="item-container">
                     <div class="content">
                         <h2>Tour North</h2>
@@ -253,14 +253,129 @@
                         </ul>
                     </div>
                 </div>
+            </section>
+        </section>
+
+    <!--<section style="display: none">
+        <div id="fullpage">
+            <div class="section portfolio-item item-alibi">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>Alibi</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            A mobile app which lets you post anonymously in a particular group. Users can read, like and
+                            dislike posts in a group. Users can also make a guess on a particular post about the person
+                            who posted it. If it's correct user will get reward points.
+                        </p>
+                        &lt;!&ndash;<h5>Participation</h5>
+                        <p>
+                            Researcher, Interaction Designer, UI Designer, Motion Designer
+                        </p>&ndash;&gt;
+                        <button class="bn-btn light" data-view-process data-detail-page="alibi-detail-page">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul class="parallex-item scene">
+                            <li class="layer" data-depth="0.20"><img src="img/portfolio/alibi/banner.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section portfolio-item item-riverstreet">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>River Street Savannah</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            Best hotels is the re-design of a popular accommodation website "Bookings.com". This website
+                            is the part of my course work for Interactive Web Design 715.
+                        </p>
+                        &lt;!&ndash;<h5>Participation</h5>
+                        <p>
+                            Interaction Designer, UI Designer, Researcher
+                        </p>&ndash;&gt;
+                        <button class="bn-btn light">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul class="parallex-item scene">
+                            <li class="layer" data-depth="0.20"><img src="img/portfolio/riverstreet/riverstreet%20banner.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section portfolio-item item-Ambit">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>AmbitWiz</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            AmbiWiz is an online banking mobile app. Using which user can manage his bank accounts,
+                            utility bills, cheques, cards and online transfers. User can also search for the nearest
+                            ATM locations.
+                        </p>
+                        &lt;!&ndash;<h5>Participation</h5>
+                        <p>
+                            Interaction Designer, UI Designer, Researcher
+                        </p>&ndash;&gt;
+                        <button class="bn-btn light" data-view-process data-detail-page="ambit-detail-page">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul class="parallex-item scene">
+                            <li class="layer" data-depth="0.20"><img src="img/portfolio/ambit/banner.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section portfolio-item item-hotel">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>Best Hotels</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            Best hotels is the re-design of a popular accommodation website "Bookings.com". This website
+                            is the part of my course work for Interactive Web Design 715.
+                        </p>
+                        &lt;!&ndash;<h5>Participation</h5>
+                        <p>
+                            Interaction Designer, UI Designer, Researcher
+                        </p>&ndash;&gt;
+                        <button class="bn-btn light" data-view-process data-detail-page="booking-detail-page">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul class="parallex-item scene">
+                            <li class="layer" data-depth="0.20"><img src="img/portfolio/bookings/hotel%20banner.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section portfolio-item item-tournorth">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>Tour North</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            Tour North is a one page responsive website depicting my beautiful journey to the
+                            amazing valleys of Pakistan.
+                        </p>
+                        &lt;!&ndash;<h5>Participation</h5>
+                        <p>
+                            Interaction Designer, UI Designer, Researcher
+                        </p>&ndash;&gt;
+                        <button class="bn-btn light">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul class="parallex-item scene">
+                            <li class="layer" data-depth="0.20"><img src="img/portfolio/tournorth/north%20banner.png"></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>-->
+    <!-- Container for the details of each portfolio -->
+    <div class="detail-page">
 
-        <!-- Container for the details of each portfolio -->
-        <div class="detail-page">
-
-        </div>
-    </section>
+    </div>
 </div>
 <div class="side-bar-overlay"></div>
 <div class="works-page-meta" style="display: none">
@@ -355,8 +470,8 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/flat-surface-shader.js"></script>
 <script src="js/shader.js"></script>
-<script src="js/jquery.fullpage.min.js"></script>
 <script src="js/jquery.parallax.min.js"></script>
+<script src="js/jquery.onepage-scroll.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

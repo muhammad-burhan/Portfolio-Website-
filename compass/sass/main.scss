@@ -9,9 +9,18 @@ html {
 }
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Gotham', Arial, sans-serif;
   font-weight: normal;
   color: $text-color;
+  height: 100%;
+}
+
+.wrapper {
+  height: 100% !important;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .side-bar-overlay {

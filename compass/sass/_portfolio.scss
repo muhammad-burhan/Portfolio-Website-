@@ -133,6 +133,7 @@
     display: block;
   }
 }
+
 @media (min-width: 480px) and (max-width: 768px) {
   .portfolio-item {
     .item-container {
@@ -152,6 +153,17 @@
           width: 75% !important;
         }
       }
+      .content {
+        h5 {
+          display: none;
+        }
+        p {
+          font-size: 12px;
+        }
+        button {
+          padding: 6px 14px;
+        }
+      }
     }
   }
 }
@@ -161,6 +173,17 @@
       .media {
         img {
           width: 100% !important;
+        }
+      }
+      .content {
+        h5 {
+          display: none;
+        }
+        p {
+          font-size: 12px;
+        }
+        button {
+          padding: 6px 14px;
         }
       }
     }

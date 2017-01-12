@@ -4,15 +4,14 @@
 
 var parallax;
 $(document).ready(function() {
-    var totalPages = $("#fullpage .section.portfolio-item").length;
+    var totalPages = $(".works-page .main .section.portfolio-item").length;
     $(".page-number .total-pages").html(totalPages);
-    $('#fullpage').fullpage({
-        scrollingSpeed: 900,
-        loopTop: true,
-        loopBottom: true,
-        onLeave: function(index, nextIndex, direction) {
-            $(".page-number .current-page").html(nextIndex);
-        }
+
+    $(".main").onepage_scroll({
+        sectionContainer: ".main .section",
+        loop: true,
+        pagination: false,
+        responsiveFallback: false
     });
 
     $("#download-resume").click(function(){
@@ -20,7 +19,6 @@ $(document).ready(function() {
     });
 
     $('[data-link]').click(function(event) {
-        console.log("Redirection");
         var dest = $(this).data('destination');
         var source = $(this).data('source');
 
@@ -31,6 +29,13 @@ $(document).ready(function() {
         source = "." + source;
         var destMeta = dest + "-meta";
         var sourceMeta = source + "-meta";
+
+        /* For destroying and adding events*/
+        if (dest == '.works-page') {
+            $(".main").initEvents();
+        } else if (dest == '.about-page'){
+            $(".main").destroyEvents();
+        }
 
         window.scrollTo(0, 0);
         $(dest + " section").fadeIn(300);
@@ -95,10 +100,12 @@ $(document).ready(function() {
         $(destMeta).fadeIn(1500);
 
         if (dest == '.works-page') {
+            $(".main").initEvents();
             $(source).removeClass('on-scene').removeClass('off-scene-right').addClass('off-scene-left');
             $(dest).removeClass('off-scene-right').removeClass('off-scene-left').addClass('on-scene');
             $(".background-container").removeClass('off-scene-right').hide().addClass('off-scene-left').show(400);
         } else if (dest == '.about-page') {
+            $(".main").destroyEvents();
             $(source).removeClass('on-scene').removeClass('off-scene-left').addClass('off-scene-right');
             $(dest).removeClass('off-scene-right').removeClass('off-scene-left').addClass('on-scene');
             $(".background-container").removeClass('off-scene-left').hide().addClass('off-scene-right').show(400);
@@ -108,7 +115,7 @@ $(document).ready(function() {
 
     $(".side-bar").click(function(){
         //Disable work page scrolling
-        $.fn.fullpage.setAllowScrolling(false);
+        $(".main").destroyEvents();
 
         $("body").addClass("opensidebar");
         $(".side-bar-overlay").fadeIn(400, function(){
@@ -125,8 +132,10 @@ $(document).ready(function() {
 
         loadTemplate(dest);
         $("body").addClass("detail-page-open");
-        //Enable work page scrolling
-        $.fn.fullpage.setAllowScrolling(false);
+
+        //Disable work page scrolling
+        $(".main").destroyEvents();
+
         $(".detail-page").fadeIn();
         $(".logo-light").fadeOut(function(){
             $(".visible-detail-page").fadeIn();
@@ -140,7 +149,10 @@ $(document).ready(function() {
         $(".visible-detail-page").fadeOut(function(){
             $(".logo-light").fadeIn();
         });
-        $.fn.fullpage.setAllowScrolling(true);
+
+        /* Enable Events of work page*/
+        $(".main").initEvents();
+
         $(".detail-page").fadeOut();
         $("body").removeClass("detail-page-open");
     });
@@ -148,7 +160,7 @@ $(document).ready(function() {
     $('[data-restart-slides]').click(function(event) {
         setTimeout(function(){
             $(".page-number .current-page").html("1");
-            $.fn.fullpage.silentMoveTo(1);
+            /*$.fn.fullpage.silentMoveTo(1);*/
         }, 1000);
     });
 
@@ -158,15 +170,14 @@ $(document).ready(function() {
 
 $(document).on('click', '.list-of-projects.close .circle', function()
 {
-    //Enable work page scrolling
+    /* Enable Events of work page*/
+    $(".main").initEvents();
+
     closeSideBar();
 
 });
 
 function closeSideBar(){
-    //Enable work page scrolling
-    $.fn.fullpage.setAllowScrolling(true);
-
     $(".list-of-projects").removeClass("close");
     setTimeout(function(){
         $("body").removeClass("opensidebar");
