@@ -41,25 +41,77 @@
       &.live-interviews {
         padding: 11px 14px 9px;
       }
+      &.process-icon {
+        padding: 11px 14px 9px;
+      }
+      &.design-think {
+        padding: 13px 14px 9px 15px;
+      }
+      &.sitemap-icn {
+        padding: 12px 11px 9px;
+      }
     }
+  }
+  h5 {
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+  }
+  .center-img {
+    width: 50%;
+    margin: 0 auto 30px;
   }
   .img-logo {
     width: 26%;
     margin: auto;
   }
 
-  .interview-images {
+  .grid-images {
     @include display-flex();
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     .item {
       @include flex(1);
       width: 20%;
-      margin: 10px;
-      &:first-child{
-        margin-left: 0;
+      flex-basis: 20%;
+      > div {
+        padding: 10px;
       }
-      &:last-child{
-        margin-right:0;
+    }
+    &.row-two {
+      .item {
+        width: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
       }
+    }
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .river-street-detail-page {
+    .img-logo {
+      width: 50%;
+    }
+    .grid-images {
+      .item {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+      &.row-two {
+        .item {
+          width: 100%;
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .river-street-detail-page {
+    .center-img {
+      width: 100%;
     }
   }
 }
