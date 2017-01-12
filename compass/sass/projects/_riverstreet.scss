@@ -1,0 +1,65 @@
+.river-street-detail-page {
+  font-family: 'Roboto', sans-serif;
+  padding: 30px 20px;
+  color: $riverstreet-text;
+  h3 {
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    background-color: $riverstreet-main;
+    padding: 8px 20px;
+    color: white;
+    position: relative;
+    font-size: 1.4em;
+    &:before {
+      content: " ";
+      background-color: $riverstreet-sec;
+      width: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      height: 100%;
+      transform: rotate(4deg);
+      z-index: -1;
+    }
+  }
+  h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    @include display-flex();
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    span {
+      width: 30px;
+      padding: 11px 14px 9px;
+      background-color: #10a8ab;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 10px;
+      &.live-interviews {
+        padding: 11px 14px 9px;
+      }
+    }
+  }
+  .img-logo {
+    width: 26%;
+    margin: auto;
+  }
+
+  .interview-images {
+    @include display-flex();
+    .item {
+      @include flex(1);
+      width: 20%;
+      margin: 10px;
+      &:first-child{
+        margin-left: 0;
+      }
+      &:last-child{
+        margin-right:0;
+      }
+    }
+  }
+}
