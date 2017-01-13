@@ -38,9 +38,17 @@
 
   .mock-first-cont {
     position: relative;
-    .web-mock-tb, .tablet-mock-tn, .mobile-mock-tn {
+    .tablet-mock-tn {
       position: absolute;
+      top: 35%;
     }
+    .mobile-mock-tn {
+      position: absolute;
+      top: 65%;
+    }
+  }
+  .responsive-mock-tn {
+    transform: translate3d(0px, -13%, 0px) !important;
   }
 }
 
