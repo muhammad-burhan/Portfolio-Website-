@@ -52,6 +52,19 @@
       display: none !important;
     }
   }
+
+  .grid-images {
+    .item {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+    &.row-two {
+      .item {
+        width: 100%;
+        flex-basis: 100%;
+      }
+    }
+  }
 }
 
 /* Extra Small Devices, Phones */

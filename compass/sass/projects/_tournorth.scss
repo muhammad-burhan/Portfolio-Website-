@@ -1,10 +1,54 @@
 .tournorth-detail-page {
+  padding: 30px 20px;
+  color: $riverstreet-text;
+  p {
+    font-family: 'Gotham Book', Arial, sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: $color-main;
+    &:active, &:visited, &:hover {
+      color: #0e2560;
+    }
+  }
+  .web-url {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  .logo {
+    text-align: center;
+    h1{
+      font-weight: 700;
+      font-size: 2em;
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 6px;
+    }
+  }
 
+  .center-img {
+    width: 50%;
+    margin: 0 auto 30px;
+  }
+
+  .mock-first-cont {
+    position: relative;
+    .web-mock-tb, .tablet-mock-tn, .mobile-mock-tn {
+      position: absolute;
+    }
+  }
 }
 
 @media only screen and (max-width : 768px) {
   .tournorth-detail-page {
-
+    .center-img {
+      width: 100%;
+    }
   }
 }
 
