@@ -137,6 +137,7 @@ $(document).ready(function() {
         $(".main").destroyEvents();
 
         $(".detail-page").fadeIn();
+        $(".detail-page").scrollTop(0);
         $(".logo-light").fadeOut(function(){
             $(".visible-detail-page").fadeIn();
             closeSideBar();
@@ -160,7 +161,6 @@ $(document).ready(function() {
     $('[data-restart-slides]').click(function(event) {
         setTimeout(function(){
             $(".page-number .current-page").html("1");
-            /*$.fn.fullpage.silentMoveTo(1);*/
         }, 1000);
     });
 
@@ -172,9 +172,14 @@ $(document).on('click', '.list-of-projects.close .circle', function()
 {
     /* Enable Events of work page*/
     $(".main").initEvents();
-
     closeSideBar();
+});
 
+$(document).on('click', '.side-bar-overlay', function()
+{
+    /* Enable Events of work page*/
+    $(".main").initEvents();
+    closeSideBar();
 });
 
 function closeSideBar(){
