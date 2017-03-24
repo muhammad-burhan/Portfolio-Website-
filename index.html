@@ -131,7 +131,7 @@
 <div class="about-page-meta" style="display: none">
     <nav class="header">
         <div class="bn-breadcrumb">
-            <img src="img/logo_noshadow_blue.png">
+            <img src="img/logo_noshadow_blue.png" data-link data-destination="background-container" data-source="about-page">
             <div class="divider"></div>
             <ul>
                 <li>About</li>
@@ -155,6 +155,29 @@
 <div class="wrapper works-page off-scene-right">
 
         <section class="main">
+            <section class="section portfolio-item item-gojewel">
+                <div class="item-container">
+                    <div class="content">
+                        <h2>GoJewel</h2>
+                        <h5>Overview</h5>
+                        <p>
+                            A project demonstrating a need to wear a jewelry. You can rent a jewelry using the app for
+                            as long as you want and return it whenever you like. GoJewel will also help you find a jewelry
+                            matching your needs and you can try it live before even renting it.
+                        </p>
+                        <!--<h5>Participation</h5>
+                        <p>
+                            Researcher, Interaction Designer, UI Designer, Motion Designer
+                        </p>-->
+                        <button class="bn-btn light" data-view-process data-detail-page="gojewel-detail-page">View Process</button>
+                    </div>
+                    <div class="media">
+                        <ul class="parallex-item scene">
+                            <li class="layer" data-depth="0.20"><img src="img/portfolio/gojewel/banner.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
             <section class="section portfolio-item item-alibi">
                 <div class="item-container">
                     <div class="content">
@@ -394,8 +417,10 @@
 <div class="works-page-meta" style="display: none">
     <nav class="header">
         <div class="bn-breadcrumb">
-            <img class="logo-light" src="img/logo_noshadow_white.png">
-            <img class="visible-detail-page" src="img/logo_noshadow_blue.png" style="display: none;">
+            <img class="logo-light" src="img/logo_noshadow_white.png"
+                 data-link data-destination="background-container" data-source="works-page" data-restart-slides>
+            <img class="visible-detail-page" src="img/logo_noshadow_blue.png" style="display: none;"
+                 data-link data-destination="background-container" data-source="works-page" data-restart-slides>
             <div class="divider"></div>
             <ul>
                 <li>Works</li>
@@ -405,12 +430,12 @@
             <a data-jump data-destination="about-page" data-source="works-page" data-restart-slides>Go to About</a>
         </div>
     </nav>
-    <div class="back-to-home">
+    <div class="back-to-home wp-back-btn">
         <button class="bn-arrow-circle left" data-link data-destination="background-container" data-source="works-page" data-restart-slides>
             <span class="fa fa-angle-left"></span>
         </button>
     </div>
-    <div class="back-to-home visible-detail-page" style="display: none;">
+    <div class="back-to-home visible-detail-page-back" style="display: none;">
         <button class="bn-arrow-circle left">
             <span class="fa fa-times"></span>
         </button>
@@ -425,6 +450,14 @@
     </div>
     <div class="side-bar">
         <div id="scrollstyle-3" class="side-bar-content">
+            <div class="side-bar-item" data-view-process data-detail-page="gojewel-detail-page">
+                <img src="img/portfolio/gojewel/gojewel-sidebar.jpg">
+                <div class="overlay-container">
+                    <div class="overlay"></div>
+                    <h6>GoJewel</h6>
+                    <p>Jewelry - Get it - Flaut it - Return it</p>
+                </div>
+            </div>
             <div class="side-bar-item" data-view-process data-detail-page="alibi-detail-page">
                 <img src="img/portfolio/alibi/alibi-sidebar.jpg">
                 <div class="overlay-container">
@@ -471,12 +504,11 @@
         <span class="current-page">1</span>
         <span class="divider">/</span>
         <span class="total-pages">10</span>
-        <div class="note">
+        <div class="note blink blink-infinite">
             Scroll to navigate
         </div>
     </div>
 </div>
-
 
 <script src="js/jquery.js"></script>
 <script src="js/modernizr.js"></script>

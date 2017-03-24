@@ -1,3 +1,4 @@
+@import "bootstrap";
 @import "fonts";
 @import "typography";
 @import "mixins";
@@ -14,6 +15,14 @@ body {
   font-weight: normal;
   color: $text-color;
   height: 100%;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.para-pad {
+  padding: 0 15px;
 }
 
 .wrapper {
@@ -153,6 +162,9 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
 }
 
 .about-page-meta {
+  .bn-breadcrumb img {
+    cursor: pointer;
+  }
   .back-to-home {
     position: fixed;
     top: 50%;
@@ -187,6 +199,7 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
   nav.header {
     color: white;
     .bn-breadcrumb {
+      transition: all 0.4s ease;
       .divider {
         border-color: white;
       }
@@ -194,6 +207,9 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
         li{
           color: white;
         }
+      }
+      img.logo-light, img.visible-detail-page {
+        cursor: pointer;
       }
     }
   }
@@ -310,7 +326,6 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
     top: 0;
     right: 0;
     width: 300px;
-    padding-left: 100px;
     height: 100%;
     transform: translateX(300px);
     transition: $sidebar-animation;
@@ -326,7 +341,7 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
   .page-number {
     position: fixed;
     bottom: 25px;
-    right: 25px;
+    left: 25px;
     color: white;
     text-align: center;
     font-size: 18px;
@@ -453,6 +468,11 @@ nav.header {
 .detail-page-open {
   nav.header {
     .bn-breadcrumb {
+      background: white;
+      border-radius: 30px;
+      padding: 4px 10px 0px;
+      box-shadow: 0 7px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
       .divider {
         width: 35px;
         height: 0;
@@ -477,7 +497,7 @@ nav.header {
   .back-to-home {
     display: none;
   }
-  .back-to-home.visible-detail-page {
+  .back-to-home.visible-detail-page-back {
     .bn-arrow-circle {
       padding: 10px 14px 10px 14px;
       border-color: $back-btn-clr;
@@ -547,7 +567,54 @@ nav.header {
   }
 }
 
+
+.blink {
+  -webkit-animation-name: blink;
+  -moz-animation-name: blink;
+  -o-animation-name: blink;
+  animation-name: blink;
+  -webktit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.blink-infinite {
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@-o-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
 @import "portfolio";
 @import "projects/riverstreet";
 @import "projects/tournorth";
+@import "projects/gojewel";
 @import "responsive";

@@ -11,7 +11,8 @@ $(document).ready(function() {
         sectionContainer: ".main .section",
         loop: true,
         pagination: false,
-        responsiveFallback: false
+        responsiveFallback: false,
+        keyboard: true
     });
 
     $("#download-resume").click(function(){
@@ -123,7 +124,19 @@ $(document).ready(function() {
         });
     });
 
+    $(".list-of-projects").click(function(){
 
+        if(!($("body").hasClass("opensidebar"))){
+            //Disable work page scrolling
+            $(".main").destroyEvents();
+
+            $("body").addClass("opensidebar");
+            $(".side-bar-overlay").fadeIn(400, function(){
+                $(".list-of-projects").addClass("close");
+            });
+        }
+
+    });
 
     $('[data-view-process]').click(function(e) {
         e.stopPropagation();
@@ -135,10 +148,11 @@ $(document).ready(function() {
 
         //Disable work page scrolling
         $(".main").destroyEvents();
-
+        $(".works-page-meta .wp-back-btn").fadeOut(200);
         $(".detail-page").fadeIn();
         $(".detail-page").scrollTop(0);
         $(".logo-light").fadeOut(function(){
+            $(".visible-detail-page-back").fadeIn();
             $(".visible-detail-page").fadeIn();
             closeSideBar();
             $(".list-of-projects").removeClass("close");
@@ -146,39 +160,39 @@ $(document).ready(function() {
         $(".list-of-projects").removeClass("close");
     });
 
-    $(".back-to-home.visible-detail-page").click(function(){
-        $(".visible-detail-page").fadeOut(function(){
-            $(".logo-light").fadeIn();
-        });
-
-        /* Enable Events of work page*/
-        $(".main").initEvents();
-
-        $(".detail-page").fadeOut();
-        $("body").removeClass("detail-page-open");
+    $(".back-to-home.visible-detail-page-back").click(function(){
+        closeDetailPage();
     });
 
     $('[data-restart-slides]').click(function(event) {
         setTimeout(function(){
-            $(".page-number .current-page").html("1");
+            //$(".page-number .current-page").html("1");
+            closeDetailPage();
         }, 1000);
     });
 
     parallax = $('.parallex-item').parallax();
+
+    $(".main").destroyEvents();
 });
 
 
 $(document).on('click', '.list-of-projects.close .circle', function()
 {
     /* Enable Events of work page*/
-    $(".main").initEvents();
+    if(!$("body").hasClass("detail-page-open")) {
+        $(".main").initEvents();
+    }
+
     closeSideBar();
 });
 
 $(document).on('click', '.side-bar-overlay', function()
 {
     /* Enable Events of work page*/
-    $(".main").initEvents();
+    if(!$("body").hasClass("detail-page-open")) {
+        $(".main").initEvents();
+    }
     closeSideBar();
 });
 
@@ -198,4 +212,18 @@ function loadTemplate(temp) {
     $container.load(templateURL, param, function(data, status, xhr) {
         $(".detail-page").html(data);
     });
+}
+
+function closeDetailPage(){
+    $(".visible-detail-page").fadeOut(function(){
+        $(".logo-light").fadeIn();
+    });
+
+    $(".visible-detail-page-back").hide();
+    $(".works-page-meta .wp-back-btn").fadeIn();
+    /* Enable Events of work page*/
+    $(".main").initEvents();
+
+    $(".detail-page").fadeOut();
+    $("body").removeClass("detail-page-open");
 }

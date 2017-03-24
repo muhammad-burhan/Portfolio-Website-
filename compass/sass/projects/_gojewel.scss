@@ -1,0 +1,104 @@
+.gojewel-detail-page {
+  padding: 30px 20px;
+  font-family: 'Gotham Book', Arial, sans-serif;
+  color: $gojewel-text;
+  h3 {
+    display: inline-block;
+    background-color: $gojewel-main;
+    padding: 8px 20px;
+    color: white;
+    position: relative;
+    font-size: 1.4em;
+  }
+  h4 {
+    font-size: 1.2em;
+    @include display-flex();
+    justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    span {
+      width: 30px;
+      padding: 11px 14px 9px;
+      background-color: #10a8ab;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 10px;
+      &.live-interviews {
+        padding: 11px 14px 9px;
+      }
+      &.process-icon {
+        padding: 11px 14px 9px;
+      }
+      &.design-think {
+        padding: 13px 14px 9px 15px;
+      }
+      &.sitemap-icn {
+        padding: 12px 11px 9px;
+      }
+    }
+  }
+  h5 {
+    font-size: 1.3em;
+    color: $gojewel-main;
+    font-family: 'Gotham Bold', Arial, sans-serif;
+    display: inline-block;
+    margin: 12px 0;
+  }
+  .center-img {
+    width: 50%;
+    margin: 0 auto 30px;
+  }
+  .img-logo {
+    width: 20%;
+    margin: auto;
+  }
+  .grid-images.row-two {
+    .item {
+      p {
+        padding: 0 10px;
+      }
+    }
+  }
+  .progressionexp {
+    text-align: left;
+    li{
+      margin: 10px 0;
+    }
+  }
+
+}
+
+#player .controls-wrapper .title {
+  display: none;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width : 768px) {
+  .gojewel-detail-page {
+    .img-logo {
+      width: 40%;
+    }
+
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .gojewel-detail-page {
+    .center-img {
+      width: 100%;
+    }
+  }
+}
