@@ -11,6 +11,9 @@
       width: 100%;
     }
   }
+  .item-google {
+    background-color: #2981fc;
+  }
   .item-gojewel {
     background-color: #555555;
   }
@@ -81,6 +84,11 @@
 .side-bar-item {
   background-color: #0ac2d2;
   position: relative;
+
+  &.google-sidebar-item {
+    cursor: not-allowed;
+  }
+
   .overlay-container {
     position: absolute;
     top:0;
