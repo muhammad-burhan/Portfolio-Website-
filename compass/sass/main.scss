@@ -559,6 +559,13 @@ nav.header {
       padding: 10px;
     }
   }
+  &.row-three {
+    .item {
+      width: 33.3333333%;
+      flex-basis: 33.3333333%;
+      max-width: 33.3333333%;
+    }
+  }
   &.row-two {
     .item {
       width: 50%;
@@ -618,4 +625,5 @@ nav.header {
 @import "projects/riverstreet";
 @import "projects/tournorth";
 @import "projects/gojewel";
+@import "projects/mgs";
 @import "responsive";

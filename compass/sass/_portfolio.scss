@@ -1,7 +1,4 @@
 .works-page {
-  .item-alibi {
-    background-color: #58b8bf;
-  }
   .detail-page-container {
     width: 960px;
     margin: 90px auto;
@@ -12,35 +9,127 @@
     }
   }
   .item-google {
-    background-color: #2981fc;
+    /*background-color: #2981fc;*/
+    .video-google-overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+    }
   }
   .item-gojewel {
-    background-color: #555555;
+    /*background-color: #555555;*/
+    .video-gojewel-overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+    }
+  }
+  .item-wrc {
+    .video-mgs-overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
+  }
+  .item-mgs {
+    .video-mgs-overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+    }
   }
   .item-riverstreet {
-    background-color: #10a8ab;
+    /*background-color: #10a8ab;*/
+    .video-riverstreet-overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+    }
+  }
+  .item-alibi {
+    /*background-color: #58b8bf;*/
+    .video-alibi-overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+    }
   }
   .item-Ambit {
-    background-color: #125474;
+    /*background-color: #125474;*/
+    .video-ambit-overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+    }
   }
   .item-hotel {
     background-color: #042758;
   }
   .item-tournorth {
-    background-color: #2cacfd;
+    /*background-color: #2cacfd;*/
+    .video-tournorth-overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+    }
   }
 }
 
 .portfolio-item {
+  .background-video {
+    position: relative;
+    video {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      min-height: 100%;
+    }
+  }
+
   .item-container {
     padding: 0 12%;
     @include display-flex();
     height: 100%;
     align-items: center;
+    position: relative;
     .content {
-      @include flex(1);
+      @include flex(1.5);
       color: white;
-      width: 50%;
+      width: 60%;
       h2 {
         margin: 0;
       }

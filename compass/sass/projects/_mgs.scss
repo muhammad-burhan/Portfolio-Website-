@@ -1,0 +1,68 @@
+.mgs-detail-page {
+  padding: 50px 20px;
+  font-family: 'Gotham Book', Arial, sans-serif;
+  color: $gojewel-text;
+  h3 {
+    display: inline-block;
+    color: $gojewel-main;
+    position: relative;
+    font-size: 1.4em;
+  }
+  h5 {
+    font-size: 1.3em;
+    color: $gojewel-main;
+    font-family: 'Gotham Bold', Arial, sans-serif;
+    display: inline-block;
+    margin: 12px 0;
+  }
+  .center-img {
+    width: 50%;
+    margin: 0 auto 30px;
+  }
+  .img-logo {
+    width: 40%;
+    margin: auto;
+  }
+  .grid-images.row-three {
+    .item {
+      p {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+#player .controls-wrapper .title {
+  display: none;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width : 768px) {
+  .mgs-detail-page {
+    .img-logo {
+      width: 60%;
+    }
+
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .mgs-detail-page {
+    .center-img {
+      width: 100%;
+    }
+  }
+}
