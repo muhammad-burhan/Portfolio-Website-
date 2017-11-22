@@ -469,7 +469,7 @@ nav.header {
 .detail-page-open {
   nav.header {
     .bn-breadcrumb {
-      background: white;
+      background: rgba(255,255,255,0.9);
       border-radius: 30px;
       padding: 4px 10px 0px;
       box-shadow: 0 7px 5px rgba(0,0,0,0.1), 0 2px 5px rgba(0,0,0,0.1);
@@ -626,4 +626,5 @@ nav.header {
 @import "projects/tournorth";
 @import "projects/gojewel";
 @import "projects/mgs";
+@import "projects/wrc";
 @import "responsive";
