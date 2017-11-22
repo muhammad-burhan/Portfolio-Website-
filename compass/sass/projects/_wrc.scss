@@ -33,6 +33,19 @@
   .left-content {
     text-align: left;
   }
+  .resource-link {
+    line-height: 38px;
+    a, a:active {
+      color: $text-color;
+    }
+    p {
+      margin: 0;
+      margin-top: -5px;
+    }
+  }
+  .m-l-10 {
+    margin-left: 10px;
+  }
 }
 
 #player .controls-wrapper .title {
