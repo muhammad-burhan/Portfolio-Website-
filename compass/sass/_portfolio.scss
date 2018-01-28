@@ -102,13 +102,18 @@
 .portfolio-item {
   .background-video {
     position: relative;
+    .background-video-container {
+      position: absolute;
+      width: 100%;
+      height: auto;
+    }
     video {
       width: 100%;
-      position: absolute;
+      /*position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
-      z-index: -1;
+      z-index: -1;*/
     }
     img {
       width: 100%;
@@ -329,5 +334,18 @@
 @media only screen and (max-width : 992px) {
   .works-page .detail-page-container {
     width: auto !important;
+  }
+}
+/*@media (min-aspect-ratio: 16/9) {
+  .background-video {
+    width: 100%;
+    height: auto;
+  }
+}*/
+
+@media (max-aspect-ratio: 16/9) {
+  .background-video video {
+    width: auto !important;
+    height: 100%;
   }
 }
