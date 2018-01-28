@@ -17,6 +17,9 @@ body {
   height: 100%;
 }
 
+.t-a-l {
+  text-align: left;
+}
 .p-0 {
   padding: 0;
 }
@@ -96,14 +99,13 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
       @include flex(2);
       h4 {
         display: inline-block;
-        padding-bottom: 4px;
-        border-bottom: 3px solid grey;
-        margin-bottom: 8px;
-        transition: border 0.3s ease-in;
+        /*border-bottom: 3px solid grey;*/
+        margin-bottom: 0;
+        /*transition: border 0.3s ease-in;
         &:hover {
           border-color: $heading-line-hover;
           transition: border 0.3s ease-in;
-        }
+        }*/
       }
       p {
         font-size: 18px;
@@ -159,6 +161,59 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
       }
     }
   }
+
+  .more-info {
+    padding: 0;
+    .info-row {
+      @include display-flex();
+      width: 100%;
+      .work-experience {
+        @include flex(2);
+      }
+      .skills-set {
+        padding-left: 20px;
+        .skill-sub-cat {
+          font-family: 'Gotham', Arial, sans-serif;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        @include flex(1);
+        ul {
+          font-family: 'Gotham Book', Arial, sans-serif;
+          li {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+    .work-item {
+      padding-right: 30px;
+      margin-top: 40px;
+      .company {
+        margin-bottom: 0;
+        font-family: 'Gotham', Arial, sans-serif;
+        font-weight: 600;
+      }
+      .position {
+        margin: 8px 0 6px;
+        font-size: 16px;
+        color: #848484;
+        text-transform: capitalize;
+      }
+      .date {
+        font-size: 14px;
+        margin: 0;
+        color: #a9a9a9;
+      }
+      ul {
+        font-family: 'Gotham Book', Arial, sans-serif;
+        li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
 }
 
 .about-page-meta {
