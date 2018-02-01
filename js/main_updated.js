@@ -19,6 +19,10 @@ $(document).ready(function() {
         $('#fullpage').fullpage();
     });
 
+    setTimeout(function(){
+        $(".about-page").css({"overflow-y": "auto", "height": "100%"});
+    }, 1000);
+
     $("#download-resume").click(function(){
         window.open('docs/Burhan-Design.pdf');
     });

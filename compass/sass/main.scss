@@ -164,6 +164,7 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
 
   .more-info {
     padding: 0;
+    margin-bottom: 120px;
     .info-row {
       @include display-flex();
       width: 100%;
