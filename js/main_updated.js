@@ -4,21 +4,14 @@
 
 var parallax;
 $(document).ready(function() {
-    /*var totalPages = $(".works-page .main .section.portfolio-item").length;
+    var totalPages = $("#fullpage .section").length;
     $(".page-number .total-pages").html(totalPages);
-
-    $(".main").onepage_scroll({
-        sectionContainer: ".main .section",
-        loop: true,
-        pagination: false,
-        responsiveFallback: false,
-        keyboard: true
-    });*/
 
     $(document).ready(function() {
         $('#fullpage').fullpage();
     });
 
+    /*Setting a scroll bar for about page after giving the shader time to get responsive*/
     setTimeout(function(){
         $(".about-page").css({"overflow-y": "auto", "height": "100%"});
     }, 1000);
@@ -172,15 +165,13 @@ $(document).ready(function() {
         closeDetailPage();
     });
 
-    $('[data-restart-slides]').click(function(event) {
+    /*$('[data-restart-slides]').click(function(event) {
         setTimeout(function(){
             //$(".page-number .current-page").html("1");
             closeDetailPage();
         }, 1000);
     });
-
-    parallax = $('.parallex-item').parallax();
-
+*/
     /*$(".main").destroyEvents();*/
 });
 
