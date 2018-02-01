@@ -22,7 +22,7 @@
 
     <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/onepage-scroll.css">
+    <link rel="stylesheet" href="css/jquery.fullpage.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,9 +56,6 @@
 <!-- ****************************************************************************************** -->
 <!-- **** Inspection? Why don't you just email me and ask whatever questions you have :) ****-->
 <!-- ****************************************************************************************** -->
-
-
-
 
 <!-- ****************************************************************************************** -->
 <!-- ********************************** MAIN PAGE *********************************************-->
@@ -250,64 +247,83 @@
 <!-- ****************************************************************************************** -->
 <div class="wrapper works-page off-scene-right">
 
-        <section class="main">
-            <section class="section portfolio-item item-google">
-                <div class="background-video">
-                    <div class="background-video-container">
-                        <video src="videos/google.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-                <div class="video-google-overlay"></div>
-                <div class="item-container">
-                    <div class="content">
-                        <h2>Google + SCAD</h2>
-                        <h5>Overview</h5>
-                        <p>
-                            SCAD is collaborating with Google to research and create AR application with a
-                            primary goal of developing community, authentic relationships, and self-expression. The project
-                            is under NDA, i would be able to share more in interview setting.
-                        </p>
-                        <h5>Participation</h5>
-                        <p>
-                            Creative Director, UX Engineer, Motion Designer, Researcher
-                        </p>
-                    </div>
-                    <div class="media">
-                        <!--<ul class="parallex-item scene">
-                            <li class="layer" data-depth="0.20"><img src="img/portfolio/google/banner.png"></li>
-                        </ul>-->
-                    </div>
-                </div>
-            </section>
-            <section class="section portfolio-item item-gojewel">
-                <div class="background-video">
-                    <div class="background-video-container">
-                        <video src="videos/gojewel.mp4" autoplay loop muted></video>
-                    </div>
-                </div>
-                <div class="video-gojewel-overlay"></div>
-                <div class="item-container">
-                    <div class="content">
-                        <h2>GoJewel</h2>
-                        <h5>Overview</h5>
-                        <p>
-                            A project demonstrating a need to wear a jewelry. You can rent a jewelry using the app for
-                            as long as you want and return it whenever you like. GoJewel will also help you find a jewelry
-                            matching your needs and you can try it live before even renting it.
-                        </p>
-                        <h5>Participation</h5>
-                        <p>
-                            Project Lead, Researcher, UX Designer, Motion Designer
-                        </p>
-                        <button class="bn-btn light" data-view-process data-detail-page="gojewel-detail-page">View Process</button>
-                    </div>
-                    <div class="media">
-                        <!--<ul class="parallex-item scene">
-                            <li class="layer" data-depth="0.20"><img src="img/portfolio/gojewel/banner.png"></li>
-                        </ul>-->
+    <div id="fullpage">
+        <div class="section">
+            <section class="portfolio-item item-google">
+                <video class="fullPageVideo" loop muted data-autoplay>
+                    <source src="videos/google.mp4" type="video/mp4">
+                </video>
+
+                <div class="content-layer">
+                    <div class="item-container">
+                        <div class="video-google-overlay"></div>
+                        <div class="content">
+                            <h2>Google + SCAD</h2>
+                            <h5>Overview</h5>
+                            <p>
+                                SCAD is collaborating with Google to research and create AR application with a
+                                primary goal of developing community, authentic relationships, and self-expression. The project
+                                is under NDA, i would be able to share more in interview setting.
+                            </p>
+                            <h5>Participation</h5>
+                            <p>
+                                Creative Director, UX Engineer, Motion Designer, Researcher
+                            </p>
+                        </div>
+                        <div class="media">
+                            <ul class="parallex-item scene">
+                                <li class="layer" data-depth="0.20">
+                                    <img src="img/portfolio/google/banner.png">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
+        </div>
+
+        <div class="section">
+            <section class="portfolio-item item-gojewel">
+                <video class="fullPageVideo" loop muted data-autoplay>
+                    <source src="videos/gojewel.mp4" type="video/mp4">
+                </video>
+
+                <div class="content-layer">
+                    <div class="item-container">
+                        <div class="video-gojewel-overlay"></div>
+                        <div class="content">
+                            <h2>GoJewel</h2>
+                            <h5>Overview</h5>
+                            <p>
+                                A project demonstrating a need to wear a jewelry. You can rent a jewelry using the app for
+                                as long as you want and return it whenever you like. GoJewel will also help you find a jewelry
+                                matching your needs and you can try it live before even renting it.
+                            </p>
+                            <h5>Participation</h5>
+                            <p>
+                                Project Lead, Researcher, UX Designer, Motion Designer
+                            </p>
+                            <button class="bn-btn light" data-view-process data-detail-page="gojewel-detail-page">View Process</button>
+                        </div>
+                        <div class="media">
+                            <ul class="parallex-item scene">
+                                <li class="layer" data-depth="0.20">
+                                    <img src="img/portfolio/gojewel/banner.png">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="section">Some section</div>
+        <div class="section">Some section</div>
+        <div class="section">Some section</div>
+    </div>
+
+    <!--<section class="main">
+
             <section class="section portfolio-item item-wrc">
                 <div class="background-video">
                     <div class="background-video-container">
@@ -378,16 +394,16 @@
                             dislike posts in a group. Users can also make a guess on a particular post about the person
                             who posted it. If it's correct user will get reward points.
                         </p>
-                        <!--<h5>Participation</h5>
+                        &lt;!&ndash;<h5>Participation</h5>
                         <p>
                             Researcher, Interaction Designer, UI Designer, Motion Designer
-                        </p>-->
+                        </p>&ndash;&gt;
                         <button class="bn-btn light" data-view-process data-detail-page="alibi-detail-page">View Process</button>
                     </div>
                     <div class="media">
-                        <!--<ul class="parallex-item scene">
+                        &lt;!&ndash;<ul class="parallex-item scene">
                             <li class="layer" data-depth="0.20"><img src="img/portfolio/alibi/banner.png"></li>
-                        </ul>-->
+                        </ul>&ndash;&gt;
                     </div>
                 </div>
             </section>
@@ -407,16 +423,16 @@
                             utility bills, cheques, cards and online transfers. User can also search for the nearest
                             ATM locations.
                         </p>
-                        <!--<h5>Participation</h5>
+                        &lt;!&ndash;<h5>Participation</h5>
                         <p>
                             Interaction Designer, UI Designer, Researcher
-                        </p>-->
+                        </p>&ndash;&gt;
                         <button class="bn-btn light" data-view-process data-detail-page="ambit-detail-page">View Process</button>
                     </div>
                     <div class="media">
-                        <!--<ul class="parallex-item scene">
+                        &lt;!&ndash;<ul class="parallex-item scene">
                             <li class="layer" data-depth="0.20"><img src="img/portfolio/ambit/banner.png"></li>
-                        </ul>-->
+                        </ul>&ndash;&gt;
                     </div>
                 </div>
             </section>
@@ -435,20 +451,20 @@
                             River Street Savannah is the Re-design of River Street Website. River Street is a tourist spot of Savannah
                             which has a lot of historic and artistic importance.
                         </p>
-                        <!--<h5>Participation</h5>
+                        &lt;!&ndash;<h5>Participation</h5>
                         <p>
                             Interaction Designer, UI Designer, Researcher
-                        </p>-->
+                        </p>&ndash;&gt;
                         <button class="bn-btn light" data-view-process data-detail-page="riverstreet-detail-page">View Process</button>
                     </div>
                     <div class="media">
-                        <!--<ul class="parallex-item scene">
+                        &lt;!&ndash;<ul class="parallex-item scene">
                             <li class="layer" data-depth="0.20"><img src="img/portfolio/riverstreet/riverstreet%20banner.png"></li>
-                        </ul>-->
+                        </ul>&ndash;&gt;
                     </div>
                 </div>
             </section>
-            <!--<section class="section portfolio-item item-hotel">
+            &lt;!&ndash;<section class="section portfolio-item item-hotel">
                 <div class="item-container">
                     <div class="content">
                         <h2>Best Hotels</h2>
@@ -469,7 +485,7 @@
                         </ul>
                     </div>
                 </div>
-            </section>-->
+            </section>&ndash;&gt;
             <section class="section portfolio-item item-tournorth">
                 <div class="background-video">
                     <div class="background-video-container">
@@ -486,20 +502,20 @@
                             amazing valleys of Pakistan. Rich media including sound, videos and images takes the user into the
                             beautiful valleys and creates a unique experience.
                         </p>
-                        <!--<h5>Participation</h5>
+                        &lt;!&ndash;<h5>Participation</h5>
                         <p>
                             Interaction Designer, UI Designer, Researcher
-                        </p>-->
+                        </p>&ndash;&gt;
                         <button class="bn-btn light" data-view-process data-detail-page="tournorth-detail-page">View Process</button>
                     </div>
                     <div class="media">
-                        <!--<ul class="parallex-item scene">
+                        &lt;!&ndash;<ul class="parallex-item scene">
                             <li class="layer" data-depth="0.20"><img src="img/portfolio/tournorth/north%20banner.png"></li>
-                        </ul>-->
+                        </ul>&ndash;&gt;
                     </div>
                 </div>
             </section>
-        </section>
+        </section>-->
 
     <!--<section style="display: none">
         <div id="fullpage">
@@ -754,8 +770,8 @@
 <script src="js/flat-surface-shader.js"></script>
 <script src="js/shader.js"></script>
 <script src="js/jquery.parallax.min.js"></script>
-<script src="js/jquery.onepage-scroll.js"></script>
-<script src="js/main.js"></script>
+<script src="js/jquery.fullpage.min.js"></script>
+<script src="js/main_updated.js"></script>
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

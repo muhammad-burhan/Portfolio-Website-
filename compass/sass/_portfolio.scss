@@ -1,4 +1,8 @@
 .works-page {
+  .section {
+    overflow: hidden;
+  }
+
   .detail-page-container {
     width: 960px;
     margin: 90px auto;
@@ -16,7 +20,7 @@
       top: 0;
       left: 0;
       bottom: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.8);
     }
   }
   .item-gojewel {
@@ -100,29 +104,55 @@
 }
 
 .portfolio-item {
-  .background-video {
-    position: relative;
-    .background-video-container {
-      position: absolute;
-      width: 100%;
-      height: auto;
-    }
-    video {
-      width: 100%;
-      position: relative;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      z-index: -1;
-    }
-    img {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      min-height: 100%;
-    }
+
+  .fullPageVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+    /*background-image: !* our video *!;*/
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+    z-index:3;
+  }
+
+
+
+  /* Layer with position absolute in order to have it over the video
+  * --------------------------------------- */
+  .content-layer{
+    position: absolute;
+    z-index: 12;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+
+    /*
+    * Preventing flicker on some browsers
+    * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+    */
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  /*solves problem with overflowing video in Mac with Chrome */
+  /*#section0{
+    overflow: hidden;
+  }*/
+
+  /* Hiding video controls
+  * See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+  * --------------------------------------- */
+  video::-webkit-media-controls {
+    display:none !important;
   }
 
   .item-container {
@@ -135,6 +165,7 @@
       @include flex(1.5);
       color: white;
       width: 60%;
+      z-index: 2;
       h2 {
         margin: 0;
       }
@@ -165,6 +196,7 @@
       @include flex(1.5);
       @include display-flex();
       justify-content: Center;
+      z-index: 2;
       ul {
         width: 100%;
         img {
