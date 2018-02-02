@@ -54,8 +54,8 @@ $(document).ready(function() {
 
         window.scrollTo(0, 0);
         $(dest + " section").fadeIn(300);
-        // except main page
-        if(source != ".background-container")
+        // hide the content of about page so that there is no scroll on the main page
+        if(source == ".about-page")
             $(source + " section").fadeOut(300);
 
         $(sourceMeta).fadeOut(200);
