@@ -8,12 +8,23 @@ $(document).ready(function() {
     $(".page-number .total-pages").html(totalPages);
 
     $(document).ready(function() {
-        $('#fullpage').fullpage();
+        $('#fullpage').fullpage({
+            scrollingSpeed: 800,
+            afterRender: function(){
+                setTimeout(function(){
+                    $.fn.fullpage.setAllowScrolling(false);
+                }, 100);
+            },
+            onLeave: function(index, nextIndex, direction){
+                $(".page-number .current-page").html(nextIndex);
+            }
+        });
     });
 
     /*Setting a scroll bar for about page after giving the shader time to get responsive*/
     setTimeout(function(){
         $(".about-page").css({"overflow-y": "auto", "height": "100%"});
+        //$.fn.fullpage.setAllowScrolling(false);
     }, 1000);
 
     $("#download-resume").click(function(){
@@ -34,9 +45,11 @@ $(document).ready(function() {
 
         /* For destroying and adding events*/
         if (dest == '.works-page') {
-            /*$(".main").initEvents();*/
+            $.fn.fullpage.setAllowScrolling(true);
         } else if (dest == '.about-page'){
-            /*$(".main").destroyEvents();*/
+            $.fn.fullpage.setAllowScrolling(false);
+        } else {
+            $.fn.fullpage.setAllowScrolling(false);
         }
 
         window.scrollTo(0, 0);
@@ -102,12 +115,12 @@ $(document).ready(function() {
         $(destMeta).fadeIn(1500);
 
         if (dest == '.works-page') {
-            /*$(".main").initEvents();*/
+            $.fn.fullpage.setAllowScrolling(true);
             $(source).removeClass('on-scene').removeClass('off-scene-right').addClass('off-scene-left');
             $(dest).removeClass('off-scene-right').removeClass('off-scene-left').addClass('on-scene');
             $(".background-container").removeClass('off-scene-right').hide().addClass('off-scene-left').show(400);
         } else if (dest == '.about-page') {
-            /*$(".main").destroyEvents();*/
+            $.fn.fullpage.setAllowScrolling(false);
             $(source).removeClass('on-scene').removeClass('off-scene-left').addClass('off-scene-right');
             $(dest).removeClass('off-scene-right').removeClass('off-scene-left').addClass('on-scene');
             $(".background-container").removeClass('off-scene-left').hide().addClass('off-scene-right').show(400);
@@ -117,7 +130,7 @@ $(document).ready(function() {
 
     $(".side-bar").click(function(){
         //Disable work page scrolling
-        /*$(".main").destroyEvents();*/
+        $.fn.fullpage.setAllowScrolling(false);
 
         $("body").addClass("opensidebar");
         $(".side-bar-overlay").fadeIn(400, function(){
@@ -129,7 +142,7 @@ $(document).ready(function() {
 
         if(!($("body").hasClass("opensidebar"))){
             //Disable work page scrolling
-            /*$(".main").destroyEvents();*/
+            $.fn.fullpage.setAllowScrolling(false);
 
             $("body").addClass("opensidebar");
             $(".side-bar-overlay").fadeIn(400, function(){
@@ -148,7 +161,7 @@ $(document).ready(function() {
         $("body").addClass("detail-page-open");
 
         //Disable work page scrolling
-        /*$(".main").destroyEvents();*/
+        $.fn.fullpage.setAllowScrolling(false);
         $(".works-page-meta .wp-back-btn").fadeOut(200);
         $(".detail-page").fadeIn();
         $(".detail-page").scrollTop(0);
@@ -172,7 +185,7 @@ $(document).ready(function() {
         }, 1000);
     });
 */
-    /*$(".main").destroyEvents();*/
+    /*$.fn.fullpage.setAllowScrolling(false);*/
 });
 
 
@@ -180,7 +193,7 @@ $(document).on('click', '.list-of-projects.close .circle', function()
 {
     /* Enable Events of work page*/
     if(!$("body").hasClass("detail-page-open")) {
-        /*$(".main").initEvents();*/
+        $.fn.fullpage.setAllowScrolling(true);
     }
 
     closeSideBar();
@@ -190,7 +203,7 @@ $(document).on('click', '.side-bar-overlay', function()
 {
     /* Enable Events of work page*/
     if(!$("body").hasClass("detail-page-open")) {
-        /*$(".main").initEvents();*/
+        $.fn.fullpage.setAllowScrolling(true);
     }
     closeSideBar();
 });
@@ -221,7 +234,7 @@ function closeDetailPage(){
     $(".visible-detail-page-back").hide();
     $(".works-page-meta .wp-back-btn").fadeIn();
     /* Enable Events of work page*/
-    /*$(".main").initEvents();*/
+    $.fn.fullpage.setAllowScrolling(true);
 
     $(".detail-page").fadeOut();
     $("body").removeClass("detail-page-open");

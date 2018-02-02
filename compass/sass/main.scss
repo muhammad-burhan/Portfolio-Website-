@@ -186,6 +186,9 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
           }
         }
       }
+      .achievements-img {
+        width: 100%;
+      }
     }
     .work-item {
       padding-right: 30px;
@@ -230,7 +233,7 @@ noindex:-o-prefocus, .background-container {display: none;} /* Hide background i
 }
 
 .works-page {
-  background-color: #2981fc;
+  background-color: #0c1d4b;
   position: fixed;
   top:0;
   bottom: 0;

@@ -32,6 +32,21 @@
         font-size: 14px;
       }
     }
+    .info-row {
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-flex-direction: column;
+      .work-experience, .skills-set {
+        flex: 1;
+        width: 100%;
+      }
+      .skills-set {
+        padding-left: 0 !important;
+      }
+    }
+    h4 {
+      font-size: 1.4em;
+    }
   }
   .bn-arrow-circle {
     span {
@@ -80,6 +95,8 @@
   }
   h4 {
     font-size: 1em;
+    font-family: 'Gotham', Arial, sans-serif;
+    font-weight: 600;
   }
 
   .background-container {
