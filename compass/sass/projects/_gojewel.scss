@@ -1,5 +1,5 @@
 .gojewel-detail-page {
-  padding: 30px 20px;
+  padding: 30px;
   font-family: 'Gotham Book', Arial, sans-serif;
   color: $gojewel-text;
   h3 {
@@ -65,7 +65,14 @@
       margin: 10px 0;
     }
   }
-
+  .key-takeaway {
+    text-align: left;
+    margin: 40px 0;
+    line-height: 24px;
+  }
+  .contribution {
+    text-align: left;
+  }
 }
 
 #player .controls-wrapper .title {
