@@ -10,6 +10,7 @@ $(document).ready(function() {
     $(document).ready(function() {
         $('#fullpage').fullpage({
             scrollingSpeed: 800,
+            loopBottom: true,
             afterRender: function(){
                 setTimeout(function(){
                     $.fn.fullpage.setAllowScrolling(false);

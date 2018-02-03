@@ -630,6 +630,16 @@ nav.header {
       width: 50%;
       flex-basis: 50%;
       max-width: 50%;
+      &:nth-child(odd) {
+        div {
+          padding-left: 0;
+        }
+      }
+      &:nth-child(even) {
+        div {
+          padding-right: 0;
+        }
+      }
     }
   }
 }
@@ -686,4 +696,5 @@ nav.header {
 @import "projects/gojewel";
 @import "projects/mgs";
 @import "projects/wrc";
+@import "projects/mappen";
 @import "responsive";

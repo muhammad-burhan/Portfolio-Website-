@@ -23,6 +23,8 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,7 +56,7 @@
 </head>
 <body class="background-container-body">
 <!-- ****************************************************************************************** -->
-<!-- **** Inspection? Why don't you just email me and ask whatever questions you have :) ****-->
+<!-- ********************************** Hi There! Whats Up? ***********************************-->
 <!-- ****************************************************************************************** -->
 
 <!-- ****************************************************************************************** -->
@@ -247,12 +249,10 @@
     </div>
 </div>
 
-
 <!-- ****************************************************************************************** -->
 <!-- ********************************** WORK PAGE *********************************************-->
 <!-- ****************************************************************************************** -->
 <div class="wrapper works-page off-scene-right">
-
     <div id="fullpage">
         <div class="section">
             <section class="portfolio-item item-google">
@@ -273,7 +273,7 @@
                             </p>
                             <h5>Participation</h5>
                             <p>
-                                Creative Director, UX Engineer, Motion Designer, Researcher
+                                Creative Director, UX Engineer, Motion Designer, Qualitative Researcher
                             </p>
                         </div>
                         <div class="media">
@@ -303,7 +303,7 @@
                             <p>
                                 A project demonstrating a need to wear a jewelry. You can rent a jewelry using the app for
                                 as long as you want and return it whenever you like. GoJewel will also help you find a jewelry
-                                matching your needs and you can try it live before even renting it.
+                                matching your needs and you can try it using augmented reality before even renting it.
                             </p>
                             <h5>Participation</h5>
                             <p>
@@ -318,6 +318,35 @@
                                 </li>
                             </ul>-->
                         </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="section">
+            <section class="portfolio-item item-mappen">
+                <video class="fullPageVideo" loop muted data-autoplay>
+                    <source src="videos/google.mp4" type="video/mp4">
+                </video>
+                <div class="content-layer">
+                    <div class="item-container">
+                        <div class="video-mappen-overlay"></div>
+                        <div class="content">
+                            <h2>Mappen</h2>
+                            <h5>Overview</h5>
+                            <p>
+                                Map + Happening! Mappen. This app tells you about different experiences people had on
+                                specific places. Users can share their experience either good, average or bad and pin it
+                                to the map. The cluster of similar experiences forms a heat map on the google map, helping
+                                user being informed about what’s happening around them.
+                            </p>
+                            <h5>Participation</h5>
+                            <p>
+                                UX Designer, Researcher
+                            </p>
+                            <button class="bn-btn light" data-view-process data-detail-page="mappen-detail-page">View Process</button>
+                        </div>
+                        <div class="media"></div>
                     </div>
                 </div>
             </section>
@@ -346,9 +375,7 @@
                             </p>
                             <button class="bn-btn light" data-view-process data-detail-page="wrc-detail-page">View Process</button>
                         </div>
-                        <div class="media">
-
-                        </div>
+                        <div class="media"></div>
                     </div>
                 </div>
             </section>
@@ -377,9 +404,7 @@
                             </p>
                             <button class="bn-btn light" data-view-process data-detail-page="mgs-detail-page">View Process</button>
                         </div>
-                        <div class="media">
-
-                        </div>
+                        <div class="media"></div>
                     </div>
                 </div>
             </section>
@@ -390,7 +415,6 @@
                 <video class="fullPageVideo" loop muted data-autoplay>
                     <source src="videos/alibi.mp4" type="video/mp4">
                 </video>
-
                 <div class="content-layer">
                     <div class="item-container">
                         <div class="video-alibi-overlay"></div>
@@ -423,7 +447,6 @@
                 <video class="fullPageVideo" loop muted data-autoplay>
                     <source src="videos/ambit.mp4" type="video/mp4">
                 </video>
-
                 <div class="content-layer">
                     <div class="item-container">
                         <div class="video-ambit-overlay"></div>
@@ -451,7 +474,7 @@
             </section>
         </div>
 
-        <div class="section">
+        <!--<div class="section">
             <section class="portfolio-item item-riverstreet">
                 <video class="fullPageVideo" loop muted data-autoplay>
                     <source src="videos/riverstreet.mp4" type="video/mp4">
@@ -468,19 +491,19 @@
                             </p>
                             <h5>Participation</h5>
                             <p>
-                                Interaction Designer, UI Designer, Researcher
+                                Lead, Interaction Designer, Researcher
                             </p>
                             <button class="bn-btn light" data-view-process data-detail-page="riverstreet-detail-page">View Process</button>
                         </div>
                         <div class="media">
-                            <!--<ul class="parallex-item scene">
+                            &lt;!&ndash;<ul class="parallex-item scene">
                                 <li class="layer" data-depth="0.20"><img src="img/portfolio/riverstreet/riverstreet%20banner.png"></li>
-                            </ul>-->
+                            </ul>&ndash;&gt;
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
+        </div>-->
 
         <!--<div class="section">
             <section class="portfolio-item item-hotel">
@@ -531,7 +554,7 @@
                             </p>
                             <h5>Individual Project</h5>
                             <p>
-                                UX Designer, Photographer
+                                UX Designer, Front-end Developer, Photographer
                             </p>
                             <button class="bn-btn light" data-view-process data-detail-page="tournorth-detail-page">View Process</button>
                         </div>
@@ -545,7 +568,6 @@
             </section>
         </div>
     </div>
-
     <!-- Container for the details of each portfolio -->
     <div class="detail-page">
 
@@ -605,6 +627,14 @@
                     <p>Jewelry - Get it - Flaunt it - Return it</p>
                 </div>
             </div>
+            <div class="side-bar-item" data-view-process data-detail-page="mappen-detail-page">
+                <img src="img/portfolio/mappen/mappen-sidebar.jpg">
+                <div class="overlay-container">
+                    <div class="overlay"></div>
+                    <h6>Mappen</h6>
+                    <p>Know whats happening around you!</p>
+                </div>
+            </div>
             <div class="side-bar-item" data-view-process data-detail-page="wrc-detail-page">
                 <img src="img/portfolio/wrc/wrc-sidebar.jpg">
                 <div class="overlay-container">
@@ -645,14 +675,14 @@
                     <p>Hotel reservation website</p>
                 </div>
             </div>-->
-            <div class="side-bar-item" data-view-process data-detail-page="riverstreet-detail-page">
+            <!--<div class="side-bar-item" data-view-process data-detail-page="riverstreet-detail-page">
                 <img src="img/portfolio/riverstreet/riverstreet-sidebar.jpg">
                 <div class="overlay-container">
                     <div class="overlay"></div>
                     <h6>River Street</h6>
                     <p>Responsive Website for the Savannah River Street</p>
                 </div>
-            </div>
+            </div>-->
             <div class="side-bar-item" data-view-process data-detail-page="tournorth-detail-page">
                 <img src="img/portfolio/tournorth/tournorth-sidebar.jpg">
                 <div class="overlay-container">
@@ -680,6 +710,7 @@
 <script src="js/jquery.fullpage.min.js"></script>
 <script src="js/flat-surface-shader.js"></script>
 <script src="js/shader.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.parallax.min.js"></script>
 <script src="js/main_updated.js"></script>
 

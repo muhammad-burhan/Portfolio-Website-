@@ -12,6 +12,17 @@
       width: 100%;
     }
   }
+  .item-mappen {
+    /*background-color: #2981fc;*/
+    .video-mappen-overlay {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.8);
+    }
+  }
   .item-google {
     /*background-color: #2981fc;*/
     .video-google-overlay {

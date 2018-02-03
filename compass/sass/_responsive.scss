@@ -77,6 +77,17 @@
       .item {
         width: 100%;
         flex-basis: 100%;
+        max-width: 100%;
+        div {
+          padding: 0 !important;
+        }
+      }
+    }
+    &.row-three {
+      .item {
+        width: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
       }
     }
   }
