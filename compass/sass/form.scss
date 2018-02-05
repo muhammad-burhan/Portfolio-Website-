@@ -49,6 +49,9 @@
       -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
       transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
     }
+    a {
+      color: $color-main;
+    }
   }
   &:before {
     content: '';
@@ -65,6 +68,10 @@
     transform-origin: 0% 100%;
     -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
     transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+  }
+  a, a:visited, a:focus, a:active {
+    color: white;
+    text-decoration: none;
   }
 }
 
