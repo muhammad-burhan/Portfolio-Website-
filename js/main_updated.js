@@ -218,6 +218,7 @@ function closeSideBar(){
 }
 
 function loadTemplate(temp) {
+    $(".detail-page").html("");
     var templateURL     = 'tpl/' + temp + ".html",
         $container = $('<div></div>');
     var param = {};
