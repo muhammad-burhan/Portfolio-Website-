@@ -178,15 +178,6 @@ $(document).ready(function() {
     $(".back-to-home.visible-detail-page-back").click(function(){
         closeDetailPage();
     });
-
-    /*$('[data-restart-slides]').click(function(event) {
-        setTimeout(function(){
-            //$(".page-number .current-page").html("1");
-            closeDetailPage();
-        }, 1000);
-    });
-*/
-    /*$.fn.fullpage.setAllowScrolling(false);*/
 });
 
 
