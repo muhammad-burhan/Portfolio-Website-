@@ -228,14 +228,18 @@ function loadTemplate(temp) {
 }
 
 function closeDetailPage(){
+    /* Enable Events of work page*/
+    $.fn.fullpage.setAllowScrolling(true);
+    /* Moving to the that section */
+    var PAGE_POSITION = $(".detail-page .detail-page-container").data("section-position");
+    $.fn.fullpage.silentMoveTo(PAGE_POSITION);
+
     $(".visible-detail-page").fadeOut(function(){
         $(".logo-light").fadeIn();
     });
 
     $(".visible-detail-page-back").hide();
     $(".works-page-meta .wp-back-btn").fadeIn();
-    /* Enable Events of work page*/
-    $.fn.fullpage.setAllowScrolling(true);
 
     $(".detail-page").fadeOut();
     $("body").removeClass("detail-page-open");
