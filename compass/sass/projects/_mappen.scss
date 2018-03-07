@@ -1,45 +1,16 @@
 .mappen-detail-page {
-  font-family: 'Gotham', Arial, sans-serif;
-  font-weight: normal;
-  padding: 30px 20px;
-  color: $mappen-text;
+  .problem-statement {
+    background-color: #777777;
+    padding: 9px 44px 35px 44px;
+    p, h4 {
+      color: white;
+    }
+  }
   .content-container {
-    text-align: left;
-    padding: 0 30px;
+    padding: 44px;
   }
   h3 {
-    font-weight: 700;
-    font-family: 'Gotham', Arial, sans-serif;
-    display: inline-block;
     color: $mappen-main;
-    position: relative;
-    font-size: 1.6em;
-    letter-spacing: 8px;
-    margin-bottom: 0;
-  }
-  h4 {
-    font-size: 1.2em;
-    font-weight: 700;
-    font-family: 'Gotham', Arial, sans-serif;
-  }
-  h5 {
-    font-size: 1.2em;
-    font-weight: normal;
-    font-family: 'Gotham', Arial, sans-serif;
-  }
-  p.dark {
-    font-weight: 300;
-    font-family: 'Gotham', Arial, sans-serif;
-    color: #000;
-  }
-  p {
-    color: $mappen-text;
-  }
-  ul {
-    font-weight: 300;
-    font-family: 'Gotham', Arial, sans-serif;
-    color: #000;
-    line-height: 1.5em;
   }
   .center-img {
     width: 50%;
@@ -57,6 +28,7 @@
   .quotes {
     p {
       font-size: 1.4em;
+      font-family: 'Gotham', Arial, sans-serif;
       span {
         font-size: 0.8em;
         color: $mappen-main;
@@ -64,15 +36,10 @@
       }
     }
   }
-  .ppvideo {
-    width: 100%;
-  }
   .owl-carousel {
     &.wireframes {
-      .owl-item {
-        img {
-          border: 1px solid $mappen-text;
-        }
+      .owl-prev, .owl-next {
+        background: $mappen-main;
       }
       .owl-nav {
         margin-top: 30px;
@@ -93,34 +60,7 @@
     }
   }
 
-  .intrinsic-container {
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    .loader-status {
-      position: absolute;
-      top: 50%;
-      left:50%;
-      font-size: 1.3em;
-      transform: translateX(-50%);
-    }
-  }
-
-  /* 16x9 Aspect Ratio */
-  .intrinsic-container-16x9 {
-    padding-bottom: 100%;
-  }
-
-  .intrinsic-container iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
 }
-
 @media only screen and (max-width : 768px) {
   .mappen-detail-page {
     .img-logo {

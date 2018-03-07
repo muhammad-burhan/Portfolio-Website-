@@ -180,6 +180,14 @@ $(document).ready(function() {
     });
 });
 
+$(document).on('click', '.link-menu-item', function()
+{
+    var offset = 0; //Offset of 20px
+    var link = $(this).attr("data-href");
+    $('.detail-page').animate({
+        scrollTop: $(link).offset().top + offset
+    }, 1800);
+});
 
 $(document).on('click', '.list-of-projects.close .circle', function()
 {

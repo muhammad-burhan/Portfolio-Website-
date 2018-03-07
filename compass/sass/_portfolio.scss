@@ -222,10 +222,6 @@
   background-color: #0ac2d2;
   position: relative;
 
-  &.google-sidebar-item {
-    cursor: not-allowed;
-  }
-
   .overlay-container {
     position: absolute;
     top:0;
@@ -286,6 +282,210 @@
   }
 }
 
+.works-page .detail-project-item {
+  text-align: left;
+  width: 1024px;
+}
+.detail-project-item {
+  font-family: 'Gotham', Arial, sans-serif;
+  font-weight: normal;
+  color: $mappen-text;
+  text-align: left;
+
+  .content-container {
+    text-align: left;
+    padding: 0 44px;
+  }
+  h2 {
+    font-weight: 600;
+  }
+  h3 {
+    font-weight: 400;
+    display: inline-block;
+    position: relative;
+    font-size: 1.6em;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    text-transform: none;
+  }
+  h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+  h5 {
+    font-size: 1.2em;
+    font-weight: normal;
+    font-family: 'Gotham', Arial, sans-serif;
+  }
+  p.dark {
+    font-family: 'Gotham', Arial, sans-serif;
+    color: #000;
+  }
+  p.light {
+    font-family: 'Gotham', Arial, sans-serif;
+    color: #fff;
+  }
+  p {
+    font-weight: 300;
+    color: $mappen-text;
+  }
+  ul {
+    font-weight: 300;
+    font-family: 'Gotham', Arial, sans-serif;
+    color: $mappen-text;
+    line-height: 1.5em;
+  }
+  .center-img {
+    width: 50%;
+    margin: 0 auto 30px;
+  }
+  .img-logo {
+    width: 26%;
+    margin: auto;
+  }
+  .prompt {
+    p {
+      font-size: 1.6em;
+    }
+  }
+  .quotes {
+    p {
+      font-size: 1em;
+      margin: 5px;
+      font-family: 'Gotham Book', Arial, sans-serif;
+      span {
+        font-size: 0.8em;
+        display: block;
+      }
+    }
+  }
+  .ppvideo, .single-vid-container video {
+    width: 100%;
+  }
+
+  .intrinsic-container {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    .loader-status {
+      position: absolute;
+      top: 50%;
+      left:50%;
+      font-size: 1.3em;
+      transform: translateX(-50%);
+    }
+  }
+
+  /* 16x9 Aspect Ratio */
+  .intrinsic-container-16x9 {
+    padding-bottom: 100%;
+  }
+
+  .intrinsic-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .owl-carousel {
+    .owl-nav {
+      text-align: center;
+    }
+    .owl-prev, .owl-next {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+    .owl-prev {
+      margin-right: 15px;
+    }
+    .owl-dots{
+      text-align: center;
+      -webkit-tap-highlight-color: transparent;
+      margin-top: 10px;
+      .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        span {
+          width: 10px;
+          height: 10px;
+          margin: 5px 7px;
+          background: #D6D6D6;
+          display: block;
+          -webkit-backface-visibility: visible;
+          transition: opacity .2s ease;
+          border-radius: 30px
+        }
+        &.active span, &:hover span {
+          background: #869791
+        }
+      }
+    }
+    .owl-nav .disabled {
+      opacity: .5;
+      cursor: default
+    }
+    .owl-nav.disabled+.owl-dots {
+      margin-top: 10px
+    }
+  }
+
+  .detail-quick-links {
+    position: fixed;
+    bottom: 10px;
+    left: 40px;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        line-height: 20px;
+        .links-head {
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $mappen-text;
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .detail-project-item {
+    .img-logo {
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .detail-project-item {
+    .center-img {
+      width: 100%;
+    }
+  }
+}
 @media (min-width: 480px) and (max-width: 768px) {
   .portfolio-item {
     .item-container {
@@ -378,8 +578,13 @@
     }
   }
 }
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 1024px) {
   .works-page .detail-page-container {
     width: auto !important;
+  }
+}
+@media only screen and (max-width : 1370px) {
+  .detail-quick-links {
+    display: none;
   }
 }

@@ -30,7 +30,6 @@ body {
 
 .wrapper {
   height: 100% !important;
-  height: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -697,4 +696,5 @@ nav.header {
 @import "projects/mgs";
 @import "projects/wrc";
 @import "projects/mappen";
+@import "projects/scapes";
 @import "responsive";

@@ -1,0 +1,35 @@
+.scapes-detail-page {
+  .detail-banner {
+    background-color: #23b0db;
+    .banner-image {
+      margin: 0 auto;
+      display: block;
+      width: 60%;
+      padding-top: 10px;
+    }
+    .problem-statement {
+      padding: 30px;
+      color: white;
+    }
+  }
+  h3, h2 {
+    color: #23b0db;
+  }
+
+  .quotes {
+    p {
+      span {
+        color: #23b0db;
+      }
+    }
+  }
+
+  .owl-carousel {
+
+    .owl-prev, .owl-next {
+      background: #23b0db;
+      color: white;
+    }
+  }
+
+}

@@ -1,49 +1,22 @@
 .gojewel-detail-page {
-  padding: 30px;
-  font-family: 'Gotham Book', Arial, sans-serif;
   color: $gojewel-text;
-  h3 {
-    display: inline-block;
+
+  .problem-statement {
     background-color: $gojewel-main;
-    padding: 8px 20px;
-    color: white;
-    position: relative;
-    font-size: 1.4em;
-  }
-  h4 {
-    font-size: 1.2em;
-    @include display-flex();
-    justify-content: center;
-    align-items: center;
-    -webkit-align-items: center;
-    span {
-      width: 30px;
-      padding: 11px 14px 9px;
-      background-color: #10a8ab;
-      display: inline-block;
-      border-radius: 50%;
-      margin-right: 10px;
-      &.live-interviews {
-        padding: 11px 14px 9px;
-      }
-      &.process-icon {
-        padding: 11px 14px 9px;
-      }
-      &.design-think {
-        padding: 13px 14px 9px 15px;
-      }
-      &.sitemap-icn {
-        padding: 12px 11px 9px;
-      }
+    padding: 9px 44px 35px 44px;
+    p, h4 {
+      color: white;
     }
   }
-  h5 {
-    font-size: 1.3em;
-    color: $gojewel-main;
-    font-family: 'Gotham Bold', Arial, sans-serif;
-    display: inline-block;
-    margin: 12px 0;
+
+  .content-container {
+    padding-bottom: 44px;
   }
+
+  h5 {
+    margin: 10px 0;
+  }
+
   .center-img {
     width: 50%;
     margin: 0 auto 30px;
